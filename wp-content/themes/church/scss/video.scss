@@ -1,0 +1,73 @@
+/*--------------------------------------------------------------
+# video block
+--------------------------------------------------------------*/
+
+.post_main {
+    .video_inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+        .short_text {
+            width: 100%;
+            max-width: 573px;
+        }
+    }
+
+    .video {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 450px;
+        background-image: url('/wp-content/themes/church/img/video/video_img.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        margin-right: 30px;
+
+        .btn {
+            align-self: center;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+@media screen and (max-width:1640px) {}
+
+@media screen and (max-width:1500px) {}
+
+@media screen and (max-width:1368px) {}
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:586px) {
+    .post_main {
+        .video_inner {
+            display: block;
+            margin: 0 -15px;
+
+            .video {
+                max-width: none;
+                min-height: 245px;
+                border-radius: 0;
+                margin-right: 0;
+            }
+
+            svg {
+                width: 106.82px;
+                height: 106.82px;
+            }
+
+            .short_text {
+                width: calc(100vw - 30px);
+                margin: 35px 15px 0;
+            }
+        }
+    }
+}

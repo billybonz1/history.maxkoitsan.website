@@ -1,0 +1,320 @@
+/*--------------------------------------------------------------
+# Events
+--------------------------------------------------------------*/
+
+.events_local {
+    .title_block {
+        display: flex;
+
+        h2 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 100%;
+            color: #000000;
+            margin: 0;
+            align-self: center;
+        }
+    }
+
+    .events_btn_block {
+        margin-left: 100px;
+        align-self: center;
+        display: flex;
+
+        button {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 100%;
+            color: #9C9B9B;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 5px;
+            display: flex;
+            width: max-content;
+            padding: 7px 20px;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+
+            &.active {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 16px;
+                border: 1px solid $yellow;
+                background-color: $yellow;
+                color: #000000;
+                box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+                transition: 0.5s;
+
+                &:hover {
+                    transition: 0.5s;
+                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+    }
+
+    span.longdecor {
+        width: max-content;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 46px;
+            left: 0;
+            bottom: -20px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/calendar/decor.svg');
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+
+    .btn {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        border: 1px solid $yellow;
+        background-color: $yellow;
+        box-sizing: border-box;
+        border-radius: 5px;
+        display: flex;
+        width: max-content;
+        height: max-content;
+        align-self: center;
+        padding: 7px 20px;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: #000000;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+        transition: 0.5s;
+
+        &:hover {
+            transition: 0.5s;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .events_main {
+        margin-top: 100px;
+    }
+
+    .events_box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        gap: 64px 150px;
+        margin-bottom: 100px;
+    }
+
+    .event {
+        width: 100%;
+        max-width: 448px;
+
+        h3 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            margin: 0;
+        }
+    }
+
+    .img_block {
+        margin-bottom: 20px;
+
+        img {
+            filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+            border-radius: 10px;
+        }
+    }
+
+    .bottom_block {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .inner_block {
+        margin-left: 15px;
+    }
+
+    .date {
+        span {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 120%;
+        }
+    }
+
+    .time {
+        span {
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 120%;
+        }
+    }
+
+    .more_block {
+        position: relative;
+        width: 300px;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        cursor: pointer;
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 100%;
+            text-align: center;
+            color: #000000;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        .more_bottom {
+            position: relative;
+            margin: 30px auto 0;
+            width: 208px;
+            height: 40px;
+            background: $yellow;
+            border-radius: 15px 15px 0px 0px;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 30.09px;
+                height: 16.5px;
+                top: calc(50% - 8.25px);
+                left: calc(50% - 15px);
+                background-image: url('/wp-content/themes/church/img/wroclaw/calendar/arrow_icon.svg');
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1640px) {
+    .events_local {
+        .events_box {
+            gap: 64px;
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {}
+
+@media screen and (max-width:1368px) {}
+
+@media screen and (max-width:1200px) {
+    .events_local {
+        .event {
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+        .img_block {
+            margin-bottom: 10px;
+        }
+
+        .bottom_block {
+            flex-direction: column;
+            margin-top: 10px;
+
+            .inner_block {
+                order: 1;
+                margin-left: 0;
+            }
+
+            a.btn {
+                order: 2;
+                align-self: flex-start;
+                height: max-content;
+                font-size: 14px;
+                line-height: 100%;
+                margin-top: 10px;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .events_local {
+        .title_block {
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        .events_box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: auto;
+            gap: 64px;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:586px) {
+    .events_local {
+        .events_main {
+            margin-top: 50px;
+        }
+
+        .events_box {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: auto;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .event {
+            margin: 0 auto;
+        }
+
+        .title_block {
+            flex-direction: column;
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .events_btn_block {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+
+        .more_block {
+            p {
+                display: none;
+            }
+        }
+    }
+}

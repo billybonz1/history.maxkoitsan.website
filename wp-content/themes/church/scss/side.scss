@@ -1,0 +1,346 @@
+/*--------------------------------------------------------------
+# Side Panel
+--------------------------------------------------------------*/
+.side-panel {
+    position: fixed;
+    top: 48px;
+    right: 0;
+    display: block;
+    z-index: 10;
+    width: 584px;
+    height: 100%;
+    overflow: auto;
+    transition: .2s ease-out;
+    transform: translateX(100%);
+    padding-left: 0;
+}
+
+.admin-bar .side-panel {
+    top: 32px;
+}
+
+.side-panel.active {
+    transform: translateX(0%);
+}
+
+.side-panel.service {
+    top: 0 !important;
+}
+
+.side-panel::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-image: url("/wp-content/themes/church/img/side_decor.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 167px;
+    height: 268px;
+    z-index: 3;
+}
+
+.side-inner {
+    min-height: 100vh;
+    overflow-x: hidden;
+    // box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
+    background-color: $black;
+}
+
+.side-panel-overlay {
+    overflow: hidden;
+
+    &.service::after {
+        top: 0 !important;
+    }
+}
+
+.side-panel-overlay:after {
+    content: "";
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 28, 28, 0.8);
+    backdrop-filter: blur(20px);
+    z-index: 2;
+}
+
+.side-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+
+    .sidelogo {
+        display: none;
+
+        img {
+            width: 48px;
+            height: 51.35px;
+        }
+    }
+}
+
+.side-close-btn {
+    line-height: 0;
+    margin-left: auto;
+}
+
+.side-close-btn button {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    position: relative;
+}
+
+.side-close-btn button span {
+    position: absolute;
+    width: 48px;
+    height: 2px;
+    background-color: #9C9B9B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: .2s ease-out;
+}
+
+.side-close-btn button:hover span {
+    background-color: #ffb100;
+}
+
+.side-close-btn button span:first-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.side-close-btn button span:last-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.side_container {
+    position: relative;
+    width: 100%;
+    max-width: 325px;
+    margin: 0 auto;
+    z-index: 4;
+
+    .line {
+        left: 100px;
+    }
+}
+
+.header_text {
+    position: relative;
+    margin-bottom: 58px;
+
+    p {
+        margin: 0;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 48px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: $yellow;
+    }
+}
+
+.location_menu_block {
+    padding-top: 38px;
+
+    h3,
+    li.menu-item-has-children {
+        a {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 150%;
+            display: flex;
+            align-items: center;
+            color: rgba(196, 196, 196, 0.5);
+            text-decoration: none;
+
+            &:hover {
+                font-weight: bold;
+                color: $yellow;
+            }
+        }
+    }
+
+    ul.sub-menu li {
+        a {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 150%;
+            display: flex;
+            align-items: center;
+            color: #C4C4C4;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: bold;
+                color: $yellow;
+            }
+        }
+    }
+
+    li {
+        margin-left: 30px;
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*--------------------------------------------------------------
+# Side Panel @media
+--------------------------------------------------------------*/
+@media screen and (max-width:1640px) {
+    .side-panel {
+        top: 40px;
+    }
+
+    .side-panel-overlay:after {
+        top: 40px;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .side-panel {
+        width: 421px;
+
+        &::after {
+            width: 127px;
+            height: 228px;
+        }
+    }
+
+    .header_text p {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .side_container {
+        max-width: 285px;
+
+        .line {
+            left: 50px;
+        }
+    }
+
+    .location_menu_block {
+
+        h3,
+        li.menu-item-has-children {
+            a {
+                font-size: 15px;
+            }
+        }
+
+        ul.sub-menu li {
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1368px) {}
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:768px) {
+    .side-panel {
+        top: 0;
+        height: auto;
+        min-height: auto;
+
+        &::after {
+            background-image: url('/wp-content/themes/church/img/side_decor_white.svg');
+            top: 110px;
+        }
+    }
+
+    .side-inner {
+        min-height: auto;
+        height: 100vh;
+        background-color: $yellow;
+    }
+
+    .side-panel .white_bg {
+        padding: 0 15px;
+    }
+
+    .side-header {
+        padding: 36px 0 20px;
+
+        margin-bottom: 50px;
+
+        .sidelogo {
+            display: flex;
+            align-self: center;
+
+            img {
+                display: flex;
+                align-self: center;
+            }
+        }
+    }
+
+    .side-close-btn button span {
+        background-color: #fff;
+    }
+
+    .side-close-btn button:hover span {
+        background-color: $black;
+    }
+
+    .side-panel-overlay:after {
+        top: 0;
+    }
+
+    .header_text p {
+        color: $black;
+    }
+
+    .side_container .line {
+        background-color: $black;
+        left: 0;
+        width: 415px;
+    }
+
+    .location_menu_block {
+
+        h3,
+        li.menu-item-has-children {
+            a {
+                color: $black;
+            }
+        }
+
+        ul.sub-menu li {
+            a {
+                color: $black;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:586px) {
+    .side-panel {
+        width: 100%;
+    }
+}

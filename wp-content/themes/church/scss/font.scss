@@ -1,0 +1,147 @@
+/*--------------------------------------------------------------
+# fonts
+--------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-Bold.eot');
+    src: local('TT Norms Pro Bold'), local('TTNormsPro-Bold'),
+        url('/wp-content/themes/church/font/TTNormsPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-Bold.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-Bold.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-ExtraBold.eot');
+    src: local('TT Norms Pro ExtraBold'), local('TTNormsPro-ExtraBold'),
+        url('/wp-content/themes/church/font/TTNormsPro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-ExtraBold.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-ExtraBold.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-Regular.eot');
+    src: local('TT Norms Pro Regular'), local('TTNormsPro-Regular'),
+        url('/wp-content/themes/church/font/TTNormsPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-Regular.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-Regular.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-Light.eot');
+    src: local('TT Norms Pro Light'), local('TTNormsPro-Light'),
+        url('/wp-content/themes/church/font/TTNormsPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-Light.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-Light.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-Medium.eot');
+    src: local('TT Norms Pro Medium'), local('TTNormsPro-Medium'),
+        url('/wp-content/themes/church/font/TTNormsPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-Medium.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-Medium.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-BoldItalic.eot');
+    src: local('TT Norms Pro Bold Italic'), local('TTNormsPro-BoldItalic'),
+        url('/wp-content/themes/church/font/TTNormsPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-BoldItalic.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-BoldItalic.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-Black.eot');
+    src: local('TT Norms Pro Black'), local('TTNormsPro-Black'),
+        url('/wp-content/themes/church/font/TTNormsPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-Black.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-Black.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('/wp-content/themes/church/font/TTNormsPro-Italic.eot');
+    src: local('TT Norms Pro Italic'), local('TTNormsPro-Italic'),
+        url('/wp-content/themes/church/font/TTNormsPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/TTNormsPro-Italic.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/TTNormsPro-Italic.woff') format('woff'),
+        url('/wp-content/themes/church/font/TTNormsPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('/wp-content/themes/church/font/MullerMedium.eot');
+    src: local('Muller Medium'), local('MullerMedium'),
+        url('/wp-content/themes/church/font/MullerMedium.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/MullerMedium.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/MullerMedium.woff') format('woff'),
+        url('/wp-content/themes/church/font/MullerMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('/wp-content/themes/church/font/MullerRegular.eot');
+    src: local('Muller Regular'), local('MullerRegular'),
+        url('/wp-content/themes/church/font/MullerRegular.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/MullerRegular.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/MullerRegular.woff') format('woff'),
+        url('/wp-content/themes/church/font/MullerRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('/wp-content/themes/church/font/MullerBold.eot');
+    src: local('Muller Bold'), local('MullerBold'),
+        url('/wp-content/themes/church/font/MullerBold.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/MullerBold.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/MullerBold.woff') format('woff'),
+        url('/wp-content/themes/church/font/MullerBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Black Diamond';
+    src: url('/wp-content/themes/church/font/BlackDiamond.eot');
+    src: local('Black Diamond'), local('BlackDiamond'),
+        url('/wp-content/themes/church/font/BlackDiamond.eot?#iefix') format('embedded-opentype'),
+        url('/wp-content/themes/church/font/BlackDiamond.woff2') format('woff2'),
+        url('/wp-content/themes/church/font/BlackDiamond.woff') format('woff'),
+        url('/wp-content/themes/church/font/BlackDiamond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

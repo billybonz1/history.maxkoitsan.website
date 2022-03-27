@@ -1,0 +1,298 @@
+/*--------------------------------------------------------------
+# author page
+--------------------------------------------------------------*/
+
+.author_first {
+    margin-top: 100px !important;
+    min-height: 590px;
+
+    .section-bg {
+        background-color: #F6F6F6;
+    }
+
+    .main_block {
+        width: 100%;
+        max-width: 1414px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+
+    .img_block {
+        width: 100%;
+        max-width: 450px;
+        margin-top: -100px;
+    }
+
+    .text_block {
+        width: 100%;
+        max-width: 830px;
+
+        .first_text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 100%;
+            margin: 0;
+            color: $black;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 70px;
+            line-height: 100%;
+            display: flex;
+            align-items: center;
+            color: $black;
+            margin: 0;
+            max-width: 672px;
+        }
+
+        .social_block {
+            margin: 20px 0;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-right: 25px;
+        }
+
+        a {
+            color: transparent;
+        }
+    }
+
+    .description_block {
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 100%;
+            margin: 0;
+            color: #9C9B9B
+        }
+    }
+
+    img {
+        filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+        border-radius: 15px;
+    }
+}
+
+section.author_main {
+    margin-top: 0;
+
+    .section-bg {
+        background-color: #F6F6F6;
+        height: 309px;
+    }
+}
+
+.all_articles {
+    position: relative;
+    height: 97px;
+    margin-top: 78px;
+
+    .section-bg {
+        background-color: $yellow;
+    }
+
+    .btn {
+        display: flex;
+        width: 233px;
+        margin: 0 auto;
+
+        a {
+            display: block;
+            position: relative;
+            height: 97px;
+            align-self: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 120%;
+            display: flex;
+            align-items: center;
+            color: #000000;
+            text-decoration: none;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                right: -35px;
+                top: calc(50% - 6px);
+                background-image: url('/img/blog/Arrow_Right.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1640px) {}
+
+@media screen and (max-width:1500px) {
+    .author_first {
+
+        .main_block {
+            padding: 50px 0 0;
+        }
+
+        .img_block {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .text_block {
+            h1 {
+                font-size: 50px;
+            }
+        }
+
+        .description_block {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    section.author_main {
+        .section-bg {
+            height: 10%;
+        }
+    }
+
+    .all_articles {
+        height: 75px;
+
+        .btn {
+            a {
+                height: 75px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1368px) {
+    .author_first {
+        min-height: 390px;
+
+        .img_block {
+            width: 100%;
+            max-width: 321px;
+            margin-right: 40px;
+        }
+
+        .text_block {
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .description_block {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:1024px) {
+    .author_first {
+        min-height: 390px;
+
+        .main_block {
+            padding: 50px 0;
+        }
+
+        .text_block {
+            .first_text {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
+
+            li {
+                margin-right: 15px;
+            }
+        }
+
+        .img_block {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .author_first {
+        .main_block {
+            display: block;
+        }
+
+        .text_block {
+            h1 {
+                max-width: none;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+
+            ul {
+                justify-content: center;
+            }
+        }
+
+
+        .img_block {
+            margin: -100px auto 0;
+        }
+
+        .text_block {
+            margin: 20px auto 0;
+            text-align: center;
+        }
+
+        .description_block {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:586px) {
+    .all_articles {
+        height: 75px;
+
+        .btn {
+            width: max-content;
+
+            a {
+                height: 75px;
+                font-size: 20px;
+
+                &::before {
+                    top: calc(50% - 8px);
+                }
+            }
+        }
+    }
+}

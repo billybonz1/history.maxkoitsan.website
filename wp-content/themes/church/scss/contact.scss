@@ -1,0 +1,391 @@
+/*--------------------------------------------------------------
+# contact page
+--------------------------------------------------------------*/
+
+.contacts_first {
+    .main_block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 74px;
+    }
+
+    .title_block {
+        h1 {
+            font-style: normal;
+            font-weight: 800;
+            margin: 0;
+            color: #000000;
+        }
+    }
+
+    .social_top {
+
+        h3,
+        .h3 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 200%;
+            text-align: right;
+            text-transform: uppercase;
+            color: $yellow;
+            margin: 0;
+        }
+    }
+
+    .social_block {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 209px;
+        margin-left: auto;
+
+        a {
+            width: 56.95px;
+            height: 56.95px;
+            text-decoration: none;
+        }
+    }
+}
+
+.contact_second {
+    position: relative;
+
+    .section-bg {
+        background-color: #F7F7F7;
+    }
+
+    .main_block {
+        padding: 110px 0;
+    }
+
+    .inner_block {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .col {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+        }
+
+        .img {
+            display: flex;
+            width: 37px;
+            margin-right: 57px;
+            align-self: center;
+
+            img {
+                align-self: center;
+            }
+        }
+
+        .subtitle {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+            margin: 0;
+        }
+
+        a {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+            text-decoration: none;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+}
+
+.contact_map {
+
+    .main_block {
+        display: flex;
+        justify-content: space-between;
+        padding: 157px 0 131px;
+    }
+
+    .location_block {
+        position: relative;
+        width: 100%;
+        max-width: 654px;
+        align-self: center;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 219px;
+            height: 225px;
+            top: -15px;
+            left: -100px;
+            background-image: url('/img/mainpage/location_stripe.svg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+    }
+
+    h2 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #000000;
+        margin: 0;
+        max-width: 322px;
+    }
+
+    .country_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 43px;
+
+        a {
+            font-family: $muller;
+            width: 100%;
+            max-width: 325px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 25px;
+            line-height: 25px;
+            text-transform: uppercase;
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            padding-left: 35px;
+
+            &:hover,
+            &:active,
+            &.current {
+                color: $yellow;
+                font-weight: bold;
+
+                &::before {
+                    background-image: url('/img/mainpage/loc_icon_yellow.svg');
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 26px;
+                left: 0;
+                top: -2px;
+                background-image: url('/img/mainpage/loc_icon_black.svg');
+                background-position: top;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+    .map_img_block {
+        width: 100%;
+        max-width: 927px;
+    }
+}
+
+@media screen and (max-width:1640px) {}
+
+@media screen and (max-width:1500px) {
+    .contacts_first {
+        .social_top {
+
+            h3,
+            .h3 {
+                font-size: 20px;
+            }
+        }
+
+        .social_block {
+            max-width: 149px;
+
+            a {
+                width: 41.73px;
+                height: 41.73px;
+            }
+        }
+    }
+
+    .contact_second {
+        .main_block {
+            padding: 75px 0;
+        }
+    }
+}
+
+@media screen and (max-width:1368px) {}
+
+@media screen and (max-width:1200px) {
+    .contact_second {
+        .inner_block {
+            .img {
+                width: 35px;
+                margin-right: 15px;
+            }
+
+            .content {
+                align-self: center;
+            }
+
+            .subtitle {
+                font-size: 15px;
+                line-height: 17px;
+            }
+
+            a {
+                font-size: 15px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    .contact_map {
+        h2 {
+            font-size: 30px;
+            max-width: 316px;
+        }
+
+        .location_block {
+            max-width: 480px;
+            margin-left: 60px;
+
+            &::before {
+                top: -35px;
+            }
+        }
+
+        .country_list {
+            a {
+                font-size: 20px;
+                line-height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .contact_second {
+        .inner_block {
+            .img {
+                min-width: 35px;
+            }
+
+            .col {
+                max-width: 230px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .contact_second {
+        .main_block {
+            padding: 56px 0;
+        }
+
+        .inner_block {
+            display: block;
+            max-width: 270px;
+            margin: 0 auto;
+
+            .col {
+                max-width: 270px;
+                margin: 0 auto 43px;
+
+                &:last-of-type {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .contact_map {
+        .main_block {
+            display: flex;
+            flex-direction: column;
+            padding: 56px 0;
+        }
+
+        h2 {
+            font-size: 35px;
+            line-height: 100%;
+            max-width: 320px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .location_block {
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::before {
+                top: -50px;
+                left: calc(50% - 240px);
+                transform: rotate(42.29deg);
+                height: 121.52433175148474px;
+                width: 123px;
+                left: 178px;
+            }
+        }
+
+        .country_list {
+            flex-direction: column;
+
+            a {
+                font-size: 20px;
+                line-height: 100%;
+                max-width: max-content;
+                text-align: center;
+                margin: 0 auto 10px;
+            }
+        }
+
+        .map_img_block {
+            max-width: 400px;
+            margin: 40px auto 0;
+        }
+    }
+}
+
+@media screen and (max-width:586px) {
+    .contacts_first {
+        .main_block {
+            margin-bottom: 24px;
+        }
+
+        .social_top {
+
+            h3,
+            .h3 {
+                font-size: 10px;
+            }
+        }
+
+        .social_block {
+            max-width: 68px;
+
+            a {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

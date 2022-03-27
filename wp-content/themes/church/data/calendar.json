@@ -1,0 +1,209 @@
+{
+    "events": {
+        "2022": {
+            "January": {
+                "1": [
+                    {
+                        "name": "Новый год",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Новый год Новый год",
+                        "date": "1/01/2022",
+                        "time": "18:30 - 21:00 (PL time)",
+                        "street": "ul. Powstańców Śląskich 199, 53-140 Wrocław",
+                        "phone": "+7 575 955 335"
+                    }
+                ]
+            },
+            "February": {
+                "23": [
+                    {
+                        "name": "День смеха",
+                        "image": "/img/wroclaw/calendar/img_2.jpg",
+                        "description": "День дураков, всемирный праздник, отмечаемый 1 апреля во многих странах. ",
+                        "date": "23/02/2022",
+                        "time": "18:30 - 21:00 (PL time)",
+                        "street": "ul. Powstańców Śląskich 9, 2-47 Wrocław",
+                        "phone": "+375 575 955 335"
+                    },
+                    {
+                        "name": "День защитника Отечества",
+                        "image": "/img/wroclaw/calendar/img_3.jpg",
+                        "description": "«День защи́тника Оте́чества»  праздник, отмечаемый ежегодно 23 февраля",
+                        "date": "23/02/2022",
+                        "time": "18:30 - 21:00 (PL time)",
+                        "street": "ul. Powstańców Śląskich 199, 53-140 Wrocław",
+                        "phone": "+7 575 955 335"
+                    }
+                ],
+                "9": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "date": "9/02/2022 - 13/02/2022",
+                        "time": "18:30 - 21:00 (PL time)",
+                        "phone": "+8 575 955 135",
+                        "street": "ul. Powstańców Śląskich 9, 2-47 Wrocław",
+                        "span": [
+                            9,
+                            10,
+                            11,
+                            12,
+                            13
+                        ]
+                    }
+                ]
+            },
+            "March": {
+                "8": [
+                    {
+                        "name": "Междунаро́дный же́нский день",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "праздник, который отмечается ежегодно 8 марта в ряде стран мира.  ",
+                        "street": "ul. Powstańców Śląskich 19, 23-241 Wrocław",
+                        "phone": "+11 575 955 335"
+                    }
+                ]
+            },
+            "April": {
+                "1": [
+                    {
+                        "name": "Еще один праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "День дураков, всемирный праздник, отмечаемый 1 апреля во многих странах. ",
+                        "street": "ul. Powstańców Śląskich 9, 2-47 Wrocław",
+                        "phone": "+35 575 955 335"
+                    },
+                    {
+                        "name": "День смеха",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "День дураков, всемирный праздник, отмечаемый 1 апреля во многих странах. ",
+                        "street": "ul. Powstańców Śląskich 9, 2-47 Wrocław",
+                        "phone": "+375 575 955 335"
+                    }
+                ]
+            },
+            "May": {
+                "9": [
+                    {
+                        "name": "День Побе́ды",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "праздник победы Красной Армии и советского народа над нацистской Германией",
+                        "phone": "+48 575 955 335"
+                    }
+                ]
+            },
+            "June": {
+                "11": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135",
+                        "span": [
+                            11,
+                            12,
+                            13,
+                            14
+                        ]
+                    },
+                    {
+                        "name": "День Рождения",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "День дураков, всемирный праздник, отмечаемый 1 апреля во многих странах. ",
+                        "street": "ul. Powstańców Śląskich 9, 2-47 Wrocław",
+                        "phone": "+375 575 955 335"
+                    }
+                ]
+            },
+            "July": {
+                "7": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135",
+                        "span": [
+                            7,
+                            8,
+                            9
+                        ]
+                    }
+                ]
+            },
+            "August": {
+                "3": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135"
+                    }
+                ]
+            },
+            "Sempember": {
+                "9": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135",
+                        "span": [
+                            9,
+                            10,
+                            11
+                        ]
+                    }
+                ]
+            },
+            "October": {
+                "1": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135"
+                    }
+                ],
+                "11": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135",
+                        "span": [
+                            11,
+                            12,
+                            13
+                        ]
+                    }
+                ]
+            },
+            "November": {
+                "13": [
+                    {
+                        "name": "Какой-то праздник",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135",
+                        "span": [
+                            14,
+                            15,
+                            16
+                        ]
+                    }
+                ]
+            },
+            "December": {
+                "31": [
+                    {
+                        "name": "Какой-то праздник (НГ)",
+                        "image": "/img/wroclaw/calendar/img_1.jpg",
+                        "description": "Какой-то праздник, длинный всемирный...",
+                        "phone": "+8 575 955 135"
+                    }
+                ]
+            }
+        }
+    }
+}

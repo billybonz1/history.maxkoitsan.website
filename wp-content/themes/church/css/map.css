@@ -1,0 +1,135 @@
+		
+		@import url("../font/icon/style.css");
+
+
+
+		#europe-map{
+			position: relative;
+			float: right;
+			width: 1285px;
+			height: 909px;
+			background: none;
+			top: -625px;
+			z-index: 1;
+		}
+		#mapPane{
+			position: absolute;
+			top: 425px;
+			left: 250px;
+			width:510px;
+			z-index: 3;
+		}
+
+
+		.pin1 {
+			position: absolute;
+			content: '';
+			font-size: 25px;
+			margin-left: -5px;
+			margin-top: -5px;
+			color: #B4B4B4;
+		}
+		
+
+	.mapH3{
+		font-family: 'TT Norms Pro';
+		font-weight: normal;
+		font-size: 25px;
+		margin-bottom: 0px;
+	}
+	.mapH3:hover{
+		font-weight: bold;
+		color: #FFBB00;
+		 cursor: pointer;
+	}
+	.mapItemLi {
+        list-style: none;
+		font-family: 'Muller';
+		font-weight: normal;
+        font-size: 25px;
+		padding-bottom: 20px;
+		width: 203px;
+	}
+	
+  
+    .mapItemLi:hover{
+		font-weight: bold;
+		color: #FFBB00;
+		 cursor: pointer;
+		
+	}
+
+	.mapItemUl {
+		  padding: 0;
+		  columns: 2;
+		  -webkit-columns: 2;
+		  -moz-columns: 2;
+	}
+
+	.customTooltip {
+		border: none;
+		background: transparent;
+		font-family: 'Muller';
+		font-weight: normal;
+        font-size: 25px;
+		box-shadow: none;
+	}
+	.customTooltip:before{
+		border-bottom-color: transparent;
+	}
+	.nonSelectedPin{
+		text-align: center;
+		
+		width: 100px;
+		font-family: 'Muller';
+		font-weight: normal;
+        font-size: 25px;
+		color: black;
+	}
+	.nonSelectedPin > * {
+		margin: 0px;
+	}
+	
+	.nonSelectedPin:hover{
+		color: #FFBB00;
+		font-weight: bold;
+	}
+	
+	i {
+		margin-right: 15px;
+	}
+	.location_block {
+		z-index: 3;
+	}
+	
+	@media only screen and (max-width: 768px) {
+		#europe-map{
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 909px;
+			background: white;
+			top: 0;
+			z-index: 1;
+		}
+		
+		.mapItemUl {
+		  padding: 0;
+		  columns: 1;
+		  -webkit-columns: 1;
+		  -moz-columns: 1;
+			text-align: center;
+			
+		}
+		.mapItemLi {
+			width: auto;
+		}
+		#mapListDiv{
+			text-align: center;
+			display: block;
+		}
+		#mapHeader{
+			display: block;
+			text-align: center;
+		}
+	}

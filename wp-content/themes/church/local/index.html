@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Вроцлав главная</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" crossorigin=""></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin="" />
+    <script type="text/javascript" src="/js/leaflet.ajax.js"></script>
+    <!-- <link rel="stylesheet" href="/css/map.css"> -->
+</head>
+<body>
+    <div class="site">
+        <header>
+            <div class="desktop_header">
+                <div class="top_header">
+                    <div class="container">
+                        <div class="header_block">
+                            <div class="main_menu">
+                                <nav>
+                                    <ul>
+                                        <li class="current"><a href="">Главная</a></li>
+                                        <li><a href="jesus.html">Иисус</a></li>
+                                        <li><a href="#">Музыка</a></li>
+                                        <li><a target="_blank" rel="noopener noreferrer"
+                                                href="https://www.youtube.com/channel/UC2Ox_7PmLcj2mljzMZqWXZg/featured">Смотри
+                                                и слушай</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="right_block">
+                                <div class="lang_block">
+                                    <ul>
+                                        <li class="current-lang"><a href="#">RU</a></li>
+                                        <li><a href="/#pl">PL</a></li>
+                                        <li><a href="/#en">EN</a></li>
+                                    </ul>
+                                </div>
+                                <div class="location_menu">
+                                    <a class="location_button" href="#">Выбери локацию</a>
+                                </div>
+                                <div class="btn_block">
+                                    <div class="burger_button">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_header">
+                    <div class="container">
+                        <div class="header_block">
+                            <div class="logo_block">
+                                <a href="">
+                                    <img src="img/logo_main.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="bottom_menu">
+                                <nav>
+                                    <ul>
+                                        <li><a href="about_us.html">о нас </a></li>
+                                        <li class="location_button"><a href="#">локации</a></li>
+                                        <li><a href="vision.html">видение</a></li>
+                                        <li><a href="foundations.html">основания</a></li>
+                                        <li><a href="our_values.html">ценности</a></li>
+                                        <li><a href="service.html">служения</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="right_block">
+                                <div class="location_menu">
+                                    <a class="location_button" href="#">
+                                        <img src="img/location_icon_black.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="lang_block">
+                                    <ul>
+                                        <li class="current-lang"><a href="#">RU</a></li>
+                                        <li><a href="#">PL</a></li>
+                                        <li><a href="#">EN</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn_block">
+                                    <div class="burger_button">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="menu_box-panel" class="menu_box-panel custom-scrollbar">
+                    <div class="menu_box-inner">
+                        <div class="container">
+                            <div class="white_bg">
+                                <div class="menu_box-header">
+                                    <div class="menu_boxlogo">
+                                        <img src="img/logo_main_mobile.svg" alt="">
+                                    </div>
+                                    <div id="menu_box-close-btn" class="menu_box-close-btn">
+                                        <button>
+                                            <span></span>
+                                            <span></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="menu_box_main">
+                                    <div class="left_block">
+                                        <nav>
+                                            <ul>
+                                                <li class="current"><a href="#">Главная</a></li>
+                                                <li><a href="jesus.html">Иисус</a></li>
+                                                <li><a href="#">Музыка</a></li>
+                                                <li><a target="_blank" rel="noopener noreferrer"
+                                                        href="https://www.youtube.com/channel/UC2Ox_7PmLcj2mljzMZqWXZg/featured">Смотри
+                                                        и слушай</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="right_block">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="about_us.html">о нас </a></li>
+                                                <li><a href="vision.html">видение</a></li>
+                                                <li><a href="foundations.html">основания</a></li>
+                                                <li><a href="our_values.html">ценности</a></li>
+                                                <li><a href="service.html">служения</a></li>
+                                                <li><a href="blog.html">блог</a></li>
+                                                <li><a href="contacts.html">Контакты</a></li>
+                                            </ul>
+                                        </nav>
+
+                                    </div>
+                                </div>
+                                <div class="separator">
+                                    <div class="separator_loc">
+                                        <a class="location_button" href="#">Найти церковь</a>
+                                    </div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="menu_box_bottom">
+                                    <span>Следи за нами</span>
+                                    <div class="social_block">
+                                        <a href="https://www.facebook.com/nationschurchwroclaw" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <img src="img/fb.svg" alt="">
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UC2Ox_7PmLcj2mljzMZqWXZg/featured"
+                                            target="_blank" rel="noopener noreferrer">
+                                            <img src="img/youtube.svg" alt="">
+                                        </a>
+                                        <a href="https://www.instagram.com/nationschurchwroclaw/" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <img src="img/inst.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="side-panel" class="side-panel custom-scrollbar">
+                    <div class="side-inner">
+                        <div class="white_bg">
+                            <div class="side-header">
+                                <div class="sidelogo">
+                                    <img src="img/logo_main_mobile.svg" alt="">
+                                </div>
+                                <div id="side-close-btn" class="side-close-btn">
+                                    <button>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="side_container">
+                                <div class="header_text">
+                                    <p>Найди ближайшую церковь</p>
+                                </div>
+                                <div class="separator">
+                                    <div class="line"></div>
+                                </div>
+                                <div class="location_menu_block">
+                                    <div class="inner_menu">
+                                        <h3>Польша</h3>
+                                        <nav class="side-nav">
+                                            <ul>
+                                                <li><a href="#">Вроцлав</a></li>
+                                                <li><a href="#">Елена Гора</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="inner_menu">
+                                        <h3>Беларусь</h3>
+                                        <nav class="side-nav">
+                                            <ul>
+                                                <li><a href="#">Минск</a></li>
+                                                <li><a href="#">Барановичи</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main-page">
+
+        </main>
+        <footer>
+            <div class="container">
+                <div class="main_block">
+                    <div class="logo_block">
+                        <div class="logo desc">
+                            <img src="img/footer/logo_footer.svg" alt="">
+                        </div>
+                        <div class="logo mob">
+                            <img src="img/footer/logo_footer_mob.svg" alt="">
+                        </div>
+                        <div class="logo_menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="">ГЛАВНАЯ</a></li>
+                                    <li><a href="#">МУЗЫКА</a></li>
+                                    <li><a href="#">ONLINE</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="footer_menu_block">
+                        <div class="inner_block">
+                            <h3>Церковь</h3>
+                            <nav>
+                                <ul>
+                                    <li><a href="about_us.html">О нас</a></li>
+                                    <li><a href="vision.html">Видение</a></li>
+                                    <li><a href="foundations.html">Основания</a></li>
+                                    <li><a href="our_values.html">Ценности</a></li>
+                                    <li><a href="service.html">Служения</a></li>
+                                    <li><a href="contacts.html">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="inner_block">
+                            <h3>Действуй</h3>
+                            <nav>
+                                <ul>
+                                    <li><a href="jesus.html">Иисус</a></li>
+                                    <li><a target="_blank" rel="noopener noreferrer"
+                                            href="https://www.youtube.com/channel/UC2Ox_7PmLcj2mljzMZqWXZg/featured">Смотри
+                                            и слушай</a></li>
+                                    <li><a href="blog.html">Блог</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="inner_block">
+                            <h3>Служения</h3>
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Воскресное</a></li>
+                                    <li><a href="#">Молодежное</a></li>
+                                    <li><a href="#">Домашние группы</a></li>
+                                    <li><a href="#">Прославление</a></li>
+                                    <li><a href="#">Подростковое</a></li>
+                                    <li><a href="#">Детское</a></li>
+                                    <li><a href="#">Евангелизация</a></li>
+                                    <li><a href="#">Интернет</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="inner_block">
+                            <h3>Локации</h3>
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">Польша</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Вроцлав</a></li>
+                                            <li><a href="#">Еленя Гура</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center_block">
+                <div class="container">
+                    <div class="social_block">
+                        <a href="https://www.facebook.com/nationschurchwroclaw" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="img/footer/fb.svg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC2Ox_7PmLcj2mljzMZqWXZg/featured" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="img/footer/youtube.svg" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/nationschurchwroclaw/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="img/footer/inst.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+
+            <div class="container">
+                <div class="logo_menu_mob">
+                    <nav>
+                        <ul>
+                            <li><a href="">ГЛАВНАЯ</a></li>
+                            <li><a href="#">МУЗЫКА</a></li>
+                            <li><a href="#">ONLINE</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="container">
+                <div class="bottom_block">
+                    <div class="copyright">
+                        <p>Copyright © 2021 Nations - mission church. All rights reserved.</p>
+                    </div>
+                    <div class="right_block">
+                        <ul>
+                            <li><a href="control.html">Управление</a></li>
+                            <li><a href="#">Карта сайта</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/map.js"></script>
+</body>
+</html>

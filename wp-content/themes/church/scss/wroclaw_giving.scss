@@ -1,0 +1,688 @@
+/*--------------------------------------------------------------
+# Giving local page
+--------------------------------------------------------------*/
+
+.giving_local_first {
+    margin-top: 100px;
+    margin-bottom: 185px;
+
+    .main_block {
+        width: 100%;
+        max-width: 1230px;
+        margin: 0 auto;
+
+        img {
+            display: block;
+            margin: 0 auto 32px;
+            width: 97px;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 70px;
+            line-height: 100%;
+            text-align: center;
+            margin: 0;
+
+            span {
+                color: $yellow;
+            }
+        }
+
+        a.btn {
+            margin-top: 62px;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            border: 1px solid $yellow;
+            background-color: $yellow;
+            box-sizing: border-box;
+            border-radius: 5px;
+            display: flex;
+            width: max-content;
+            padding: 7px 30px;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+}
+
+.giving_local_online {
+    .section-bg {
+        // background-color: #F7F7F7;
+    }
+
+    .main_block {
+        padding: 90px 0 132px;
+        width: 100%;
+        max-width: 1404px;
+        margin: 0 auto;
+    }
+
+    .title_block {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 68px;
+        height: max-content;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 85px;
+            left: 0;
+            top: 5px;
+            background: $yellow;
+            border-radius: 15px;
+        }
+    }
+
+    h2 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 100%;
+        margin: 0;
+
+        span {
+            color: $yellow;
+        }
+    }
+
+    .inner_block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col {
+        width: 100%;
+        max-width: 687px;
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        padding: 54px 54px 30px;
+
+        img {
+            margin-right: 38px;
+            align-self: center;
+        }
+
+        h3 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 90%;
+            align-self: center;
+            margin: 0;
+        }
+    }
+
+    .title_inner {
+        display: flex;
+        margin-bottom: 85px;
+    }
+
+    .text_inner {
+        p {
+            position: relative;
+            margin: 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 120%;
+        }
+
+        i.copy {
+            position: absolute;
+            content: '';
+            top: 8px;
+            right: -10px;
+            margin-right: 0;
+            width: 11px;
+            height: 11px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/giving/copied_icon.svg');
+
+            &.hovered {
+                background-image: url('/wp-content/themes/church/img/wroclaw/giving/copied_icon_yellow.svg');
+            }
+
+            &.copied {
+                background-image: url('/wp-content/themes/church/img/wroclaw/giving/copied_icon_final.svg');
+            }
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+
+            &.copied {
+                color: $yellow;
+            }
+        }
+
+        b {
+            font-weight: bold;
+        }
+    }
+
+    p.yellow {
+        color: $yellow;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+    }
+}
+
+.giving_local_church {
+    .main_block {
+        width: 100%;
+        max-width: 1404px;
+        margin: 0 auto;
+    }
+
+    .title_block {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 68px;
+        height: max-content;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 85px;
+            left: 0;
+            top: 5px;
+            background: $yellow;
+            border-radius: 15px;
+        }
+    }
+
+    h2 {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 100%;
+        margin: 0;
+
+        span {
+            color: $yellow;
+        }
+    }
+
+    .inner_block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col {
+        width: 100%;
+        max-width: 687px;
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        padding: 54px 54px 40px;
+
+        img {
+            margin-right: 38px;
+            max-height: 48px;
+            align-self: center;
+        }
+
+        h3 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 90%;
+            align-self: center;
+            margin: 0;
+        }
+    }
+
+    .title_inner {
+        display: flex;
+        margin-bottom: 85px;
+    }
+
+    .inner_info {
+        display: flex;
+
+        p {
+            margin: 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        b {
+            font-weight: bold;
+        }
+    }
+
+    a.btn {
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        border: 1px solid $yellow;
+        background-color: $yellow;
+        box-sizing: border-box;
+        border-radius: 5px;
+        display: flex;
+        width: max-content;
+        padding: 7px 30px;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: #000000;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+        transition: 0.5s;
+
+        &:hover {
+            transition: 0.5s;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+}
+
+.giving_local_contacts {
+    .section-bg {
+        background-color: $yellow;
+    }
+
+    .main_block {
+        position: relative;
+        padding: 93px 0;
+        width: 100%;
+        max-width: 1404px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title_block {
+        width: 100%;
+        max-width: 527px;
+
+        h2 {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 130%;
+            margin: 0;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 130%;
+            margin: 0;
+        }
+    }
+
+    .social_block {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 447px;
+
+        a {
+            display: flex;
+            text-decoration: none;
+            margin-right: 44px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        img,
+        .preview-img {
+            align-self: center;
+            width: 78px;
+            height: 78px;
+        }
+
+        .preview-img {
+            align-self: center;
+            background-position: center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+            }
+        }
+    }
+
+    .triangle {
+        position: absolute;
+        top: -27px;
+        width: 56px;
+        height: 56px;
+        background: $yellow;
+        border-top-left-radius: 12px;
+        -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+        transform: rotate(45deg);
+    }
+}
+
+@media screen and (max-width:1640px) {}
+
+@media screen and (max-width:1500px) {
+    .giving_local_first {
+        .main_block {
+            max-width: 1030px;
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .giving_local_online {
+        .col {
+            padding: 34px 34px 30px;
+            max-width: 600px;
+        }
+    }
+
+    .giving_local_church {
+        .col {
+            padding: 34px 34px 30px;
+            max-width: 600px;
+        }
+    }
+}
+
+@media screen and (max-width:1368px) {
+    .giving_local_first {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .giving_local_online {
+        h2 {
+            font-size: 40px;
+        }
+
+        .col {
+            max-width: 550px;
+
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .giving_local_church {
+        h2 {
+            font-size: 40px;
+        }
+
+        .col {
+            max-width: 550px;
+
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .giving_local_contacts {
+        .title_block {
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+        }
+
+        .social_block {
+            a {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .giving_local_online {
+
+        .main_block {
+            padding: 90px 0 90px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .col {
+            max-width: 470px;
+
+            h3 {
+                font-size: 20px;
+            }
+
+            img {
+                margin-right: 20px;
+                width: 40px;
+            }
+        }
+
+        .title_inner {
+            margin-bottom: 35px;
+        }
+
+        .text_inner {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .giving_local_church {
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .col {
+            max-width: 470px;
+
+            h3 {
+                font-size: 20px;
+            }
+
+            img {
+                margin-right: 20px;
+                width: 40px;
+            }
+        }
+
+        .title_inner {
+            margin-bottom: 35px;
+        }
+
+        .inner_info {
+            p {
+                font-size: 14px;
+                line-height: 130%;
+            }
+        }
+
+        a.btn {
+            padding: 5px 20px;
+            margin-right: 0;
+        }
+    }
+
+    .giving_local_contacts {
+        .main_block {
+            padding: 75px 0;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .social_block {
+
+            img,
+            .preview-img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .giving_local_online {
+        .col {
+            max-width: 350px;
+        }
+    }
+
+    .giving_local_church {
+        .col {
+            max-width: 350px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .giving_local_first {
+        .main_block {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .giving_local_online {
+        .main_block {
+            padding: 35px 0 35px;
+        }
+
+        .title_block {
+            margin-bottom: 30px;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::before {
+                height: 100%;
+            }
+        }
+
+        .inner_block {
+            flex-direction: column;
+        }
+
+        .col {
+            max-width: 350px;
+            margin: 10px auto;
+        }
+    }
+
+    .giving_local_church {
+        .col {
+            max-width: 350px;
+            margin: 10px auto;
+        }
+
+        .title_block {
+            margin-bottom: 30px;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::before {
+                height: 100%;
+            }
+        }
+
+        .inner_block {
+            flex-direction: column;
+        }
+    }
+
+    .giving_local_contacts {
+        .main_block {
+            flex-direction: column;
+        }
+
+        .title_block {
+            margin-bottom: 30px;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .social_block {
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width:586px) {
+    .giving_local_first {
+        .main_block {
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .giving_local_contacts {
+        .main_block {
+            padding: 50px 0;
+        }
+    }
+
+    .giving_local_online {
+        .text_inner {
+            i.copy {
+                top: 2px;
+            }
+        }
+    }
+}

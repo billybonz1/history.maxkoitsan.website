@@ -1,0 +1,528 @@
+$yellow: #FFBB00;
+$black: #1F1C1C;
+$grey: #C4C4C4;
+$light-grey: #F6F6F6;
+
+@import 'font';
+
+$muller: 'Muller';
+
+* {
+    box-sizing: border-box;
+
+    &::after,
+    &::before {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    position: relative;
+    font-size: 18px;
+    line-height: 150%;
+    color: $black;
+    font-family: 'TT Norms Pro';
+    font-style: normal;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+.site {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1610px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 100%;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120%;
+}
+
+// h3 {
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 40px;
+//     line-height: 120%;
+// }
+
+// h4 {
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 24px;
+//     line-height: 120%;
+// }
+
+// h5 {
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 18px;
+//     line-height: 120%;
+// }
+
+img {
+    max-width: 100%;
+}
+
+/* Скрывает ненужные блоки */
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.section-bg {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: calc(-1 * (100vw / 2));
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section {
+    position: relative;
+    margin-top: 100px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.btn {}
+
+.site {
+    padding-top: 147px;
+}
+
+.breadcrumbs_block {
+    margin: 34px 0;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    li {
+        margin-right: 16px;
+        position: relative;
+
+        &::before {
+            content: '/';
+            position: absolute;
+            right: -12px;
+            top: 4px;
+            font-family: $muller;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 20px;
+            color: #C4C4C4;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    a {
+        font-family: $muller;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 20px;
+        color: #C4C4C4;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    span {
+        font-family: $muller;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        color: #C4C4C4;
+    }
+}
+
+.pagination_block {
+    margin: 46px 0;
+
+    .next,
+    .prev {
+        min-width: 20px;
+        min-height: 20px;
+        border-radius: 5px;
+        align-self: center;
+        padding-top: 0;
+    }
+
+    .next {
+        display: flex;
+        margin-left: 20px;
+
+        img {
+            transform: rotate(180deg);
+            align-self: center;
+        }
+
+    }
+
+    .prev {
+        margin-right: 20px;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 210px;
+        margin: 0 auto;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    a,
+    span {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        font-family: $muller;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: center;
+        color: #000000;
+        text-decoration: none;
+        margin: 0 5px;
+        padding-top: 2px;
+
+        &:hover,
+        &:active {
+            color: $yellow;
+        }
+    }
+}
+
+.show-more {
+    .more {
+        display: block;
+        border: none;
+        margin: 0 auto;
+        background: none;
+        font-family: $muller;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 120%;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #FFBB00;
+    }
+}
+
+@media screen and (max-width:1640px) {
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1418px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .site {
+        padding-top: 130px;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1318px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 50px;
+        line-height: 100%;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 120%;
+    }
+
+    .site {
+        padding-top: 120px;
+    }
+}
+
+@media screen and (max-width:1368px) {
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .breadcrumbs_block {
+        margin: 24px 0 27px;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin-right: 12px;
+            font-size: 15px;
+            line-height: 100%;
+            position: relative;
+
+            &::before {
+                content: '/';
+                position: absolute;
+                right: -10px;
+                top: 3px;
+                font-family: $muller;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 15px;
+                color: #C4C4C4;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        a {
+            font-size: 15px;
+            line-height: 15px;
+        }
+
+        span {
+            font-size: 15px;
+            line-height: 15px;
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .site {
+        padding-top: 114px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .site {
+        padding-top: 73px;
+    }
+}
+
+@media screen and (max-width:586px) {
+    .site {
+        padding-top: 61px;
+    }
+
+    .section {
+        position: relative;
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 25px;
+        line-height: 100%;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 120%;
+    }
+
+    .breadcrumbs_block {
+        margin: 17px 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin-right: 8px;
+            font-size: 10px;
+            line-height: 100%;
+            position: relative;
+
+            &::before {
+                content: '/';
+                position: absolute;
+                right: -6px;
+                top: auto;
+                font-family: $muller;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 10px;
+                line-height: 10px;
+                color: #C4C4C4;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        a {
+            font-size: 10px;
+            line-height: 10px;
+        }
+
+        span {
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+}
+
+
+.lds-dual-ring {
+    position: relative;
+    background: #f6f6f6;
+}
+
+.lds-dual-ring:after {
+    position: absolute;
+    z-index: 100;
+    content: " ";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fb0;
+    border-color: #fb0 transparent #fb0 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.lds-dual-ring .article {
+    opacity: 0;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@import 'header';
+@import 'menu_box';
+@import 'side';
+@import 'footer';
+@import 'main';
+@import 'map';
+@import 'jesus';
+@import 'our_values';
+@import 'vision';
+@import 'about_us';
+@import 'service';
+@import 'foundations';
+@import 'blog';
+@import 'author';
+@import 'post';
+@import 'audio';
+@import 'video';
+@import 'contact';
+@import 'control';
+@import 'text-page';
+@import 'wroclaw';
+@import 'wroclaw_church';
+@import 'wroclaw_about';
+@import 'wroclaw_life';
+@import 'wroclaw_vacancies';
+@import 'wroclaw_service';
+@import 'wroclaw_groups';
+@import 'filter';
+@import 'wroclaw_visit';
+@import 'wroclaw_contacts';
+@import 'wroclaw_giving';
+@import 'calendar';
+@import 'wroclaw_events';

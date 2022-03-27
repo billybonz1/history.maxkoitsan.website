@@ -1,0 +1,1172 @@
+/*--------------------------------------------------------------
+# Life local page
+--------------------------------------------------------------*/
+
+.life_local_first {
+    .main_block {
+        padding-bottom: 146px;
+    }
+
+    .title_block {
+        width: 100%;
+        max-width: 615px;
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 36px;
+            text-align: right;
+            text-transform: uppercase;
+            margin: 0 0 10px;
+            color: #000000;
+        }
+
+        h1 {
+            font-size: 78px;
+            line-height: 100%;
+            text-transform: uppercase;
+            text-align: right;
+            margin: 0;
+            color: #000000;
+
+            span {
+                display: block;
+                color: $yellow;
+                font-weight: 300;
+                margin-top: 14px;
+            }
+        }
+    }
+
+    .img_block {
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 55%;
+
+        img {
+            filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+            border-radius: 15px 0px 0px 15px;
+        }
+    }
+}
+
+.life_local_right {
+
+    &.section {
+        margin-top: 0;
+    }
+
+    &.first {
+        .main_block {
+            padding: 280px 0 150px;
+        }
+    }
+
+    .section-bg {
+        // background-color: #F6F6F6;
+    }
+
+    .main_block {
+        padding: 130px 0 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h2 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 66px;
+        line-height: 100%;
+        margin: 40px 0 40px;
+    }
+
+    span.decor {
+        width: max-content;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 76px;
+            left: 0;
+            bottom: -28px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/about/decor.svg');
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+
+    .img_block {
+        width: 100%;
+        max-width: 684px;
+        min-height: 494px;
+        position: relative;
+        margin-right: 144px;
+
+        img {
+            width: 424px;
+            height: 282px;
+            filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+            border-radius: 15px;
+        }
+
+        .first_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .second_img {
+            position: absolute;
+            top: 71px;
+            right: 0;
+            z-index: 2;
+        }
+
+        .third_img {
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 69px;
+            z-index: 2;
+        }
+    }
+
+    .text_block {
+        width: 100%;
+        max-width: 802px;
+
+        b {
+            font-weight: bold;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 100%;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .btn {
+            margin-top: 50px;
+            margin-bottom: 10px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            border: 1px solid $yellow;
+            background-color: $yellow;
+            box-sizing: border-box;
+            border-radius: 5px;
+            display: flex;
+            width: max-content;
+            height: max-content;
+            padding: 5px 20px;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+}
+
+.life_local_left {
+    .section-bg {
+        // background-color: #fff;
+    }
+
+    .main_block {
+        display: flex;
+        justify-content: space-between;
+        padding: 27px 0 127px;
+    }
+
+    h2 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 66px;
+        line-height: 100%;
+        margin: 0 0 40px;
+    }
+
+    span.decor {
+        width: max-content;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 76px;
+            left: 0;
+            bottom: -28px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/about/decor.svg');
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+
+    span.longdecor {
+        width: max-content;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 76px;
+            left: 0;
+            bottom: -8px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/life/long_decor.svg');
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+    }
+
+    .img_block {
+        width: 100%;
+        max-width: 684px;
+        min-height: 494px;
+        position: relative;
+        margin-left: 144px;
+
+        img {
+            width: 424px;
+            height: 282px;
+            filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+            border-radius: 15px;
+        }
+
+        .first_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .second_img {
+            position: absolute;
+            top: 71px;
+            right: 0;
+            z-index: 2;
+        }
+
+        .third_img {
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 69px;
+            z-index: 2;
+        }
+    }
+
+    .text_block {
+        width: 100%;
+        max-width: 802px;
+        text-align: right;
+
+        b {
+            font-weight: bold;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 100%;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .btn {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-bottom: 10px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            border: 1px solid $yellow;
+            background-color: $yellow;
+            box-sizing: border-box;
+            border-radius: 5px;
+            display: flex;
+            width: max-content;
+            height: max-content;
+            padding: 5px 20px;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+}
+
+.church_life {
+    margin-bottom: 100px;
+
+    .main_block {
+        width: 100%;
+        max-width: 1522px;
+    }
+
+    .title_block {
+        position: relative;
+
+        h2 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 70px;
+            line-height: 100%;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 197px;
+            height: 118px;
+            top: -30px;
+            left: -95px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/life/life_block_decor.svg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+    }
+
+    .church_inner {
+        img {
+            border-radius: 15px;
+        }
+    }
+
+    .wrap {
+        position: relative;
+        margin-top: 76px;
+        min-height: 432px;
+        width: 100%;
+        overflow: hidden;
+        list-style: none;
+    }
+
+    .col {
+        width: 100%;
+        height: 367px;
+    }
+
+    .link_block {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        min-width: 273px;
+        height: 107px;
+        display: flex;
+        z-index: 4;
+
+        &.long {
+            min-width: 395px;
+            height: 132px;
+            bottom: 20px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 138px;
+                background-image: url('/wp-content/themes/church/img/wroclaw/life/btn_bg_long.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 113px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/life/btn_bg.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        a {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            align-self: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 100%;
+            color: #000000;
+            text-decoration: none;
+            text-align: center;
+            z-index: 4;
+        }
+    }
+
+    .swiper-slide-next {
+        position: relative;
+        z-index: 2;
+        margin-top: 41px;
+        transform: scaleX(1.15);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .wrap:hover {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: block;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+        top: 160px;
+        width: 50px;
+        height: 50px;
+        background: $yellow;
+        border-radius: 7px;
+        opacity: 1;
+        z-index: 2;
+        transition: 0.5s;
+
+        &:hover {
+            background: #000;
+            transition: 0.5s;
+        }
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        right: 17px;
+        top: 12px;
+        position: absolute;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        left: 17px;
+        top: 12px;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width:1640px) {
+    .life_local_first {
+        .title_block {
+            width: 100%;
+            max-width: 42%;
+        }
+
+        .img_block {
+            max-width: 52%;
+        }
+    }
+
+    .church_life {
+        .col {
+            height: 320px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 150px;
+        }
+    }
+
+}
+
+@media screen and (max-width:1500px) {
+    .life_local_right {
+        &.first {
+            .main_block {
+                padding: 200px 0 150px;
+            }
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        span.decor::before {
+            background-position: center;
+            background-size: contain;
+            bottom: -34px;
+        }
+
+        .text_block {
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .life_local_left {
+        h2 {
+            font-size: 50px;
+        }
+
+        span.decor::before {
+            background-position: center;
+            background-size: contain;
+            bottom: -34px;
+        }
+
+        span.longdecor::before {
+            background-position: center;
+            background-size: cover;
+            bottom: -24px;
+            height: 56px;
+        }
+
+        .text_block {
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .church_life {
+        .title_block {
+            h2 {
+                font-size: 50px;
+            }
+        }
+
+        .wrap {
+            min-height: 372px;
+        }
+
+        .col {
+            height: 307px;
+        }
+
+        .link_block {
+            min-width: 193px;
+            height: 80px;
+
+            a {
+                font-size: 20px;
+            }
+
+            &::before {
+                height: 80px;
+            }
+
+            &.long {
+                min-width: 298px;
+                height: 105px;
+
+                &::before {
+                    height: 105px;
+                }
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 140px;
+        }
+    }
+
+
+}
+
+@media screen and (max-width:1368px) {
+
+    .life_local_first {
+        .title_block {
+            h1 {
+                font-size: 70px;
+
+                span {
+                    margin-top: 0;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 120%;
+                margin: 0;
+            }
+
+        }
+
+        .img_block {
+            max-width: 50%;
+        }
+    }
+
+    .life_local_right {
+        &.first {
+            .main_block {
+                padding: 150px 0 100px;
+            }
+        }
+
+        .main_block {
+            padding: 100px 0 100px;
+        }
+
+        .img_block {
+            min-height: 400px;
+
+            img {
+                width: 350px;
+                height: 227px;
+            }
+        }
+
+        .text_block {
+            p {
+                font-size: 20px;
+            }
+        }
+
+        h2 {
+            font-size: 45px;
+        }
+    }
+
+    .life_local_left {
+        .main_block {
+            padding: 0 0 100px;
+        }
+
+        .img_block {
+            min-height: 400px;
+
+            img {
+                width: 350px;
+                height: 227px;
+            }
+        }
+
+        .text_block {
+            p {
+                font-size: 20px;
+            }
+        }
+
+        h2 {
+            font-size: 45px;
+        }
+    }
+
+    .church_life {
+        margin-top: 0;
+
+        .title_block {
+            h2 {
+                font-size: 45px;
+            }
+        }
+
+        .col {
+            height: 277px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 138px;
+            width: 35px;
+            height: 35px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .swiper-button-next:after,
+        .swiper-rtl .swiper-button-prev:after {
+            right: 12px;
+            top: 9px;
+            position: absolute;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-rtl .swiper-button-next:after {
+            left: 12px;
+            top: 9px;
+            position: absolute;
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .life_local_right {
+        .img_block {
+            align-self: center;
+            min-height: auto;
+            height: 300px;
+
+            img {
+                width: 255px;
+                height: 170px;
+            }
+        }
+    }
+
+    .life_local_left {
+        .img_block {
+            align-self: center;
+            min-height: auto;
+            height: 300px;
+
+            img {
+                width: 255px;
+                height: 170px;
+            }
+        }
+
+        span.longdecor {
+            &::before {
+                background-image: url('/wp-content/themes/church/img/wroclaw/about/decor.svg');
+                width: 320px;
+                left: -140px;
+            }
+        }
+    }
+
+    .church_life {
+        margin-top: 0;
+
+        .title_block {
+            h2 {
+                font-size: 45px;
+            }
+        }
+
+        .col {
+            height: 220px;
+        }
+
+        .wrap {
+            min-height: 302px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 115px;
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .life_local_first {
+
+        .main_block {
+            display: flex;
+            padding-top: 75px;
+            padding-bottom: 76px;
+        }
+
+        .title_block {
+            align-self: center;
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .life_local_right {
+        .img_block {
+            align-self: center;
+            min-height: auto;
+            height: 300px;
+            margin-right: 57px;
+
+            img {
+                width: 250.03px;
+                height: 166.69px;
+            }
+
+            .second_img {
+                top: 50px;
+            }
+
+            .third_img {
+                left: 39px;
+            }
+        }
+    }
+
+    .life_local_left {
+        .img_block {
+            align-self: center;
+            min-height: auto;
+            height: 300px;
+            margin-left: 57px;
+
+            img {
+                width: 250.03px;
+                height: 166.69px;
+            }
+
+            .second_img {
+                top: 50px;
+            }
+
+            .third_img {
+                left: 39px;
+            }
+        }
+
+        span.longdecor {
+            &::before {
+                background-image: url('/wp-content/themes/church/img/wroclaw/about/decor.svg');
+                width: 320px;
+                left: -140px;
+            }
+        }
+    }
+
+    .church_life {
+        margin-top: 0;
+
+        .col {
+            height: 180px;
+        }
+
+        .wrap {
+            min-height: 272px;
+        }
+
+        .swiper-slide-next {
+            margin-top: 21px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+            top: 90px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .life_local_first {
+        .img_block {
+            display: none;
+        }
+
+        .main_block {
+            padding-bottom: 125px;
+        }
+
+        .title_block {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+
+            p {
+                text-align: center;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+
+    .life_local_right {
+        &.first {
+            .main_block {
+                padding: 0 0 68px;
+            }
+
+            .img_block {
+                margin-top: -75px;
+            }
+        }
+
+        .main_block {
+            flex-direction: column;
+        }
+
+        .img_block {
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text_block {
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+
+            p {
+                font-size: 14px;
+                line-height: 100%;
+                text-align: center;
+            }
+
+            .btn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        h2 {
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+
+    .life_local_left {
+
+        .main_block {
+            flex-direction: column;
+        }
+
+        .img_block {
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            order: 1;
+        }
+
+        .text_block {
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            order: 2;
+
+            p {
+                font-size: 14px;
+                line-height: 100%;
+                text-align: center;
+            }
+
+            .btn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        h2 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        span.longdecor {
+            &::before {
+                background-image: url('/wp-content/themes/church/img/wroclaw/life/long_decor.svg');
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    .church_life {
+        margin-top: 0;
+        margin-bottom: 50px;
+
+        .title_block {
+            width: max-content;
+            margin: 0 auto 50px;
+
+            &::before {
+                width: 127px;
+                height: 77px;
+                top: -18px;
+                left: -76px;
+                background-size: contain;
+            }
+
+            h2 {
+                text-align: center;
+                margin: 0 auto;
+                width: max-content;
+                font-size: 30px;
+            }
+        }
+
+        .wrap {
+            min-height: 272px;
+            width: 100%;
+            max-width: 560px;
+            margin: 0 auto 30px;
+
+            &:last-of-type {
+                margin: 0 auto;
+            }
+        }
+
+        .link_block {
+            bottom: auto;
+            top: 0;
+            right: 20px;
+            height: auto;
+            z-index: 2;
+            min-width: auto;
+            width: auto;
+
+            &.long {
+                bottom: auto;
+                top: 0;
+                left: auto;
+                height: auto;
+                min-width: auto;
+                width: auto;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            a {
+                z-index: 2;
+                font-size: 14px;
+                line-height: 100%;
+            }
+        }
+
+        .swiper-slide-next {
+            transform: scaleX(1);
+            margin-right: 40px;
+            margin-left: -20px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width:586px) {
+    .life_local_left {
+        .main_block {
+            padding: 0 0 50px;
+        }
+    }
+
+    .life_local_right {
+        .main_block {
+            padding: 50px 0 50px;
+        }
+    }
+
+    .church_life {
+
+        .col {
+            height: 110px;
+        }
+
+        .wrap {
+            min-height: 182px;
+            max-width: 340px;
+            margin: 0 auto 30px;
+
+            &:last-of-type {
+                margin: 0 auto;
+            }
+        }
+
+        .link_block {
+            bottom: auto;
+            top: 0;
+            height: auto;
+            z-index: 2;
+            min-width: auto;
+            width: auto;
+
+            &.long {
+                bottom: auto;
+                top: 0;
+                left: auto;
+                height: auto;
+                min-width: auto;
+                width: auto;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            a {
+                z-index: 2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    .life_local_left {
+        h2 {
+            font-size: 25px;
+        }
+
+        span.longdecor::before {
+            background-size: contain;
+        }
+    }
+
+    .life_local_right {
+        h2 {
+            font-size: 25px;
+        }
+    }
+}

@@ -1,0 +1,202 @@
+@import "../font/icon/style.css";
+
+#europe-map {
+    position: absolute;
+    right: -20%;
+    width: 100%;
+    height: 909px;
+    background: none;
+    top: 0;
+    z-index: 1;
+}
+
+#mapPane {
+    position: absolute;
+    top: 425px;
+    left: 250px;
+    width: 510px;
+    z-index: 3;
+}
+
+.pin1 {
+    position: absolute;
+    content: '';
+    font-size: 25px;
+    margin-left: -5px;
+    margin-top: -5px;
+    color: #B4B4B4;
+}
+
+.mapH3 {
+    font-family: 'TT Norms Pro';
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 0px;
+
+    &:hover {
+        font-weight: bold;
+        color: #FFBB00;
+        cursor: pointer;
+    }
+}
+
+.mapItemLi {
+    list-style: none;
+    font-family: $muller;
+    font-weight: normal;
+    font-size: 25px;
+
+    padding-bottom: 20px;
+    width: 203px;
+
+    &:hover {
+        font-weight: bold;
+        color: #FFBB00;
+        cursor: pointer;
+    }
+}
+
+.mapItemUl {
+    padding: 0;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.mapItemLiSelected {
+    list-style: none;
+    font-family: 'Muller';
+    font-weight: bold;
+    color: #FFBB00;
+    font-size: 25px;
+    padding-bottom: 20px;
+    width: 203px;
+}
+
+.customTooltip {
+    border: none;
+    background: transparent;
+    font-family: $muller;
+    font-weight: normal;
+    font-size: 25px;
+    box-shadow: none;
+
+    &:before {
+        border-bottom-color: transparent;
+    }
+}
+
+.nonSelectedPin {
+    text-align: center;
+    width: 100px;
+    font-family: $muller;
+    // font-weight: normal;
+    // font-size: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: black;
+
+    >* {
+        margin: 0px;
+    }
+
+    &:hover {
+        color: #FFBB00;
+        font-weight: bold;
+    }
+}
+
+i {
+    margin-right: 15px;
+}
+
+.location_block {
+    z-index: 3;
+}
+
+#mapHeader {
+    h3:not(.mapH3) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .mapItemUl {
+        padding: 0;
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #europe-map {
+        // position: relative;
+        display: block;
+        width: 100vw;
+        height: 909px;
+        left: 50%;
+        margin-left: calc(-1 * (100vw / 2));
+        background: white;
+        top: 150px;
+        z-index: 1;
+    }
+
+    .mapItemUl {
+        padding: 0;
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        text-align: center;
+    }
+
+    .mapItemLi {
+        width: auto;
+    }
+
+    #mapListDiv {
+        text-align: center;
+        display: block;
+    }
+
+    #mapHeader {
+        display: block;
+        text-align: center;
+        order: 2;
+    }
+
+    .nonSelectedPin {
+        font-size: 12px;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 586px) {
+    #europe-map {
+        height: 909px;
+
+        .leaflet-control-attribution {
+            display: none;
+        }
+    }
+
+    .nonSelectedPin {
+        font-size: 8px;
+        color: black;
+    }
+
+    .mapH3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .mapItemLi {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+    }
+}

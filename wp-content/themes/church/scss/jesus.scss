@@ -1,0 +1,419 @@
+/*--------------------------------------------------------------
+# Jesus page
+--------------------------------------------------------------*/
+
+.jesus_first {
+    padding-bottom: 92px;
+    min-height: 762px;
+
+    .main_block {
+        position: relative;
+    }
+
+    h1 {
+        color: #000;
+        margin-top: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    p {
+        font-family: $muller;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    span {
+        color: $yellow;
+    }
+
+    .content_block {
+        position: relative;
+        z-index: 2;
+        max-width: 1050px;
+    }
+
+    .img_block {
+        position: absolute;
+        width: 690px;
+        height: 762px;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+        img {
+            height: auto;
+        }
+    }
+}
+
+.jesus_second {
+    .section-bg {
+        background-color: #F7F7F7;
+    }
+
+    .main_block {
+        padding: 72px 0;
+    }
+
+    p,
+    li {
+        font-family: $muller;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 120%;
+        color: #000;
+    }
+
+    h2 {
+        font-family: Muller;
+        color: #000000;
+        margin-top: 0;
+    }
+
+    ol {
+        list-style: none;
+        counter-reset: section;
+    }
+
+    li {
+        margin-bottom: 50px;
+        padding-left: 50px;
+
+        &::before {
+            position: absolute;
+            left: 20px;
+            counter-increment: section;
+            content: ""counter(section) ". ";
+            font-family: Muller;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 100%;
+        }
+    }
+
+    span {
+        color: $yellow;
+    }
+}
+
+.jesus_third {
+    h2 {
+        margin-top: 0;
+    }
+
+    span {
+        color: $yellow;
+    }
+
+    .main_block {
+        width: 100%;
+        max-width: 1529px;
+        margin: 0 auto;
+        padding: 64px 0 164px;
+    }
+
+    .yellow_block {
+        border-radius: 15px;
+        background-color: $yellow;
+        padding: 96px 120px;
+        position: relative;
+
+        p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 110%;
+            color: #000000;
+            width: 100%;
+            max-width: 930px;
+            margin: 0 0 0 auto;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: -80px;
+            width: 552.5px;
+            height: 503.5px;
+            background-image: url('/wp-content/themes/church/img/jesus/hands.svg');
+
+            bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width:1640px) {
+    .jesus_first {
+        .content_block {
+            max-width: 850px;
+        }
+
+        .img_block {
+            position: absolute;
+            width: 550px;
+            height: 670px;
+        }
+    }
+
+    .jesus_third {
+        .yellow_block p {
+            max-width: 830px;
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .jesus_first {
+        min-height: auto;
+        padding-bottom: 0;
+
+        p {
+            font-size: 20px;
+            line-height: 120%;
+        }
+
+        .content_block {
+            max-width: 850px;
+        }
+
+        .img_block {
+            position: absolute;
+            width: 406px;
+            height: 449px;
+        }
+    }
+
+    .jesus_second {
+
+        p,
+        li {
+            font-size: 20px;
+            line-height: 120%;
+        }
+
+        li {
+            margin-bottom: 50px;
+            padding-left: 30px;
+        }
+
+        li::before {
+            font-size: 40px;
+            line-height: 100%;
+        }
+    }
+
+    .jesus_third {
+        .yellow_block {
+            padding: 79px;
+
+            p {
+                max-width: 830px;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 110%;
+            }
+
+            &::after {
+                width: 308.46px;
+                height: 281.1px;
+                left: -40px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1368px) {}
+
+@media screen and (max-width:1200px) {
+    .jesus_first {
+        .content_block {
+            max-width: 670px;
+        }
+    }
+
+    .jesus_third {
+        .yellow_block {
+            p {
+                max-width: 591px;
+                font-size: 20px;
+                line-height: 110%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .jesus_first {
+        .content_block {
+            max-width: none;
+        }
+
+        p:first-of-type {
+            max-width: 470px;
+        }
+
+        p:nth-of-type(2) {
+            position: relative;
+            padding-left: 20px;
+            max-width: 530px;
+            margin: 40px 0;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 6px;
+                height: 100%;
+                border-radius: 5px;
+                background-color: $yellow;
+            }
+        }
+
+        .img_block {
+            position: absolute;
+            width: 356px;
+            height: 409px;
+        }
+    }
+
+    .jesus_third {
+        .yellow_block {
+            padding: 79px 59px;
+
+            p {
+                max-width: 471px;
+                font-size: 20px;
+                line-height: 110%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .jesus_first {
+        .img_block {
+            position: absolute;
+            width: 306px;
+            height: 359px;
+        }
+
+        p:first-of-type {
+            margin-right: 40%;
+        }
+    }
+
+    .jesus_third {
+        .main_block {
+            padding: 0 0 92px;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 100%;
+            text-align: center;
+        }
+
+        .yellow_block {
+            margin-top: 50px;
+            padding: 283px 26px 37px;
+
+            p {
+                max-width: none;
+                margin-left: 0;
+                font-size: 20px;
+                line-height: 110%;
+                text-align: center;
+            }
+
+            &::after {
+                top: -60px;
+                width: 372.22px;
+                height: 372.22px;
+                left: calc(50% - 176.11px);
+                transform: rotate(4.87deg);
+                background-image: url('/wp-content/themes/church/img/jesus/hands_mob.svg');
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:586px) {
+    .jesus_first {
+        .img_block {
+            width: 168px;
+            height: 185px;
+            top: -30px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 120%;
+        }
+
+        p:first-of-type {
+            margin-right: 158px;
+        }
+    }
+
+    .jesus_second {
+        .main_block {
+            padding: 38px 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p,
+        li {
+            font-size: 14px;
+            line-height: 120%;
+        }
+
+        li {
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+
+        li::before {
+            font-size: 25px;
+            line-height: 100%;
+        }
+    }
+
+    .jesus_third {
+        .main_block {
+            padding: 0 0 52px;
+        }
+
+        .title_block {
+            max-width: 326px;
+            margin: 0 auto;
+        }
+
+        .yellow_block p {
+            font-size: 18px;
+            line-height: 110%;
+        }
+    }
+}
+
+@media screen and (max-width:386px) {
+    .jesus_first {
+
+        p:first-of-type {
+            margin-right: 128px;
+        }
+    }
+}

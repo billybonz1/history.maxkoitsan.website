@@ -1,0 +1,1046 @@
+/*--------------------------------------------------------------
+# Groups local page
+--------------------------------------------------------------*/
+.homegroups {
+    h1 {
+        margin: 0;
+    }
+
+    .filter_block {
+        position: relative;
+        background: linear-gradient(90.93deg, #F6F6F6 66.32%, rgba(246, 246, 246, 0) 98.53%);
+        border-radius: 10px;
+        margin-top: 50px;
+        padding: 10px 30px;
+
+        form {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .col {
+        position: relative;
+        margin-right: 64px;
+        outline: none;
+
+        span {
+            display: flex;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: #000000;
+            cursor: pointer;
+        }
+
+        i {
+            display: block;
+            align-self: center;
+            width: 15.5px;
+            height: 8.5px;
+            margin-left: 5px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/groups/Arrow_icon.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        ul {
+            display: none;
+            width: 173px;
+            list-style: none;
+            padding: 10px 10px 13px 23px;
+            background: #F7F7F7;
+            border-radius: 5px;
+        }
+
+        li {
+
+            a {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 150%;
+                text-transform: lowercase;
+                text-decoration: none;
+                color: #000000;
+
+                &:hover,
+                &:active {
+                    color: $yellow;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &.active {
+            ul {
+                position: absolute;
+                display: block;
+                margin-left: -23px;
+                left: 0;
+                top: calc(100% - 2px);
+                z-index: 2;
+            }
+
+            i {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .wrap {
+        display: flex;
+        align-self: center;
+    }
+
+    .reset_btn {
+        width: 100%;
+        max-width: 166px;
+        align-self: center;
+
+        input {
+            width: 100%;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 200%;
+            text-align: center;
+            color: #9C9B9B;
+            border: 1px solid #9C9B9B;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: transparent;
+            cursor: pointer;
+        }
+    }
+
+    .mob_text {
+        display: none;
+    }
+
+    .filter_btn {
+        width: 109px;
+        height: 28px;
+        background: $yellow;
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 3px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 100%;
+        color: #000;
+        border: none;
+        display: flex;
+        align-items: center;
+
+        i {
+            display: block;
+            align-self: center;
+            width: 15.64px;
+            height: 8px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/groups/filter_icon.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    }
+
+    .filter-close-btn {
+        line-height: 0;
+        margin-left: auto;
+        display: none;
+    }
+
+    .filter-close-btn button {
+        width: 48px;
+        height: 48px;
+        background-color: transparent;
+        padding: 0;
+        border: 0;
+        position: relative;
+    }
+
+    .filter-close-btn button span {
+        position: absolute;
+        width: 48px;
+        height: 2px;
+        background-color: #9C9B9B;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: .2s ease-out;
+    }
+
+    .filter-close-btn button:hover span {
+        background-color: #ffb100;
+    }
+
+    .filter-close-btn button span:first-child {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .filter-close-btn button span:last-child {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+.filter_selected {
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    left: 0;
+    top: 100%;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        background: #F7F7F7;
+        border-radius: 3px;
+        margin-right: 11px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        padding: 5px 9px;
+        color: #9C9B9B;
+        display: flex;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            color: #000000;
+            background: $yellow;
+            transition: 0.5s;
+
+            .close {
+                width: 12px;
+                height: 12px;
+            }
+
+            span {
+                width: 10px;
+                height: 2px;
+                background-color: #A80606;
+                transition: 0.2s;
+
+                &:first-of-type {
+                    transform: rotate(45deg);
+                    top: 6px;
+                }
+
+                &:last-of-type {
+                    transform: rotate(-45deg);
+                    top: 6px;
+                }
+            }
+        }
+    }
+
+    .close {
+        display: block;
+        position: relative;
+        align-self: center;
+        margin-left: 5px;
+        width: 8px;
+        height: 8px;
+
+        span {
+            position: absolute;
+            display: block;
+            width: 6.21px;
+            height: 1px;
+            background-color: #9C9B9B;
+            transition: 0.2s;
+
+
+            &:first-of-type {
+                transform: rotate(45deg);
+                top: 5.5px;
+            }
+
+            &:last-of-type {
+                transform: rotate(-45deg);
+                top: 5.5px;
+            }
+        }
+    }
+}
+
+.group_block {
+    margin-top: 130px;
+    margin-bottom: 85px;
+
+    .group_main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        gap: 87px 30px;
+        width: 100%;
+        max-width: 1401px;
+        margin: 0 auto;
+    }
+
+    .group_inner {
+        position: relative;
+        width: 447px;
+        height: 447px;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 15px;
+        padding: 35px 30px;
+    }
+
+    .img_block {
+        position: absolute;
+        top: -44px;
+        left: -22px;
+        width: 222.52px;
+        height: 222.52px;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center;
+        filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.15));
+        border-radius: 10px;
+    }
+
+    .author_block {
+        width: 100%;
+        max-width: 195px;
+        min-height: 124px;
+        margin-left: auto;
+
+        h3 {
+            margin: 0;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 26px;
+            line-height: 100%;
+            color: #000000;
+        }
+
+        .time {
+            margin-top: 30px;
+            display: flex;
+
+        }
+
+        img {
+            align-self: center;
+            width: 16.32px;
+            height: 16.32px;
+            margin-right: 14px;
+        }
+
+        span {
+            align-self: center;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 100%;
+            color: #000000;
+        }
+    }
+
+    .week_block {
+        margin-top: 55px;
+
+        span {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 100%;
+            color: $yellow;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 100%;
+            margin: 0;
+            color: #000000;
+        }
+    }
+
+    .contact_block {
+        margin-top: 33px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .phone {
+        position: relative;
+        padding-left: 11px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 2.04px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $yellow;
+            border-radius: 11px;
+        }
+
+        span {
+            display: block;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 100%;
+            color: #000000;
+        }
+
+        a {
+            display: block;
+            margin-top: 5px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 100%;
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+
+    .social_block {
+        display: flex;
+        align-self: flex-end;
+
+        a {
+            display: flex;
+            text-decoration: none;
+            margin-right: 5px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            align-self: center;
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    .adres {
+        position: relative;
+        margin-top: 42px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 19.17px;
+            height: 23px;
+            top: 0;
+            left: -3px;
+            background-image: url('/wp-content/themes/church/img/wroclaw/groups/adres_icon.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        span {
+            padding-left: 33px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 100%;
+            color: #000000;
+        }
+    }
+}
+
+@media screen and (max-width:1640px) {
+    .group_block {
+        .group_inner {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .img_block {
+            top: -44px;
+            left: -44px;
+            width: 200.52px;
+            height: 200.52px;
+        }
+
+        .week_block {
+            margin-top: 30px;
+        }
+
+        .adres {
+            position: relative;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .group_block {
+
+        .group_main {
+            gap: 57px 30px;
+        }
+
+        .group_inner {
+            padding: 25px;
+        }
+
+        .img_block {
+            top: -22px;
+            left: -22px;
+            width: 180.52px;
+            height: 180.52px;
+        }
+    }
+}
+
+@media screen and (max-width:1368px) {
+    .homegroups .col {
+        margin-right: 34px;
+    }
+
+    .group_block {
+        // margin-top: 85px;
+        margin-bottom: 85px;
+
+        .group_main {
+            gap: 57px 30px;
+        }
+
+        .group_inner {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .img_block {
+            top: -22px;
+            left: -22px;
+            width: 180.52px;
+            height: 180.52px;
+        }
+
+        .author_block {
+            max-width: 165px;
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .group_block {
+
+        .img_block {
+            top: -22px;
+            left: -22px;
+            width: 160.52px;
+            height: 160.52px;
+        }
+
+        .author_block {
+            max-width: 115px;
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .time {
+                margin-top: 10px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    .homegroups {
+        .col {
+            margin-right: 20px;
+
+            span {
+                font-size: 15px;
+            }
+
+            li {
+                a {
+                    font-size: 15px;
+                }
+            }
+
+            ul {
+                width: 143px;
+            }
+
+            i {
+                width: 12.5px;
+                height: 6.5px;
+                margin-left: 3px;
+            }
+        }
+    }
+
+    .group_block {
+        // margin-top: 85px;
+        margin-bottom: 85px;
+
+        .group_main {
+            gap: 57px 30px;
+        }
+
+        .group_inner {
+            padding: 25px 10px 25px 25px;
+            max-width: 265px;
+        }
+
+        .img_block {
+            top: -22px;
+            left: -22px;
+            width: 132.13px;
+            height: 132.13px;
+        }
+
+        .author_block {
+            max-width: 105px;
+            min-height: 74px;
+
+            h3 {
+                font-size: 16px;
+            }
+
+            .time {
+                margin-top: 10px;
+            }
+
+            span {
+                font-size: 12px;
+            }
+        }
+
+        .week_block {
+            span {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .phone {
+            span {
+                font-size: 10px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .social_block {
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .adres {
+            &::before {
+                width: 11.13px;
+                height: 13.36px;
+            }
+
+            span {
+                font-size: 10px;
+                display: block;
+                padding-left: 17px;
+            }
+        }
+
+        .contact_block {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .homegroups {
+        .container {
+            position: initial;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 40px;
+        }
+
+        .mob_text {
+            display: block;
+            max-width: 400px;
+            margin: 20px auto 0;
+
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 100%;
+                text-align: center;
+            }
+        }
+
+        .filter_btn {
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .filter-close-btn {
+            display: block;
+        }
+
+        .filter_block {
+            display: none;
+            position: absolute;
+            overflow-y: scroll;
+            top: 0;
+            right: 0;
+            margin-top: 0;
+            width: 421px;
+            height: 100vh;
+            background: #F6F6F6;
+            border-radius: 0;
+            padding: 25px 20px;
+            z-index: 3;
+
+            form {
+                flex-direction: column;
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .wrap {
+            margin-top: 41px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            order: 2;
+            width: 100%;
+            max-width: 375px;
+        }
+
+        .reset_btn {
+            order: 1;
+            margin: 0 auto 0 0;
+            height: auto;
+            background: transparent;
+            max-width: none;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                max-width: 160px;
+            }
+        }
+
+        .col {
+            margin-bottom: 0;
+            padding: 12.5px 0;
+            margin-right: 0;
+            max-width: none;
+
+            span {
+                font-size: 20px;
+            }
+
+            i {
+                margin-right: 0;
+                margin-left: auto;
+                background-image: url('/wp-content/themes/church/img/wroclaw/groups/plus_icon.svg');
+                width: 14px;
+                height: 14px;
+            }
+
+            li {
+                a {
+                    font-size: 20px;
+                    line-height: 150%;
+                }
+            }
+
+            &:last-of-type {
+                margin-top: 0;
+            }
+
+            ul {
+                width: 100%;
+            }
+
+            a.active {
+                font-style: normal;
+                font-weight: 500;
+                color: $yellow;
+            }
+        }
+
+        .col.active {
+            ul {
+                position: relative;
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                background-color: #F6F6F6;
+                border-radius: 0;
+                left: auto;
+                top: auto;
+                z-index: 2;
+                padding: 0 10px 0 23px;
+            }
+
+            i {
+                background-image: url('/wp-content/themes/church/img/wroclaw/groups/minus_icon.svg');
+            }
+        }
+    }
+
+    .filter_selected {
+        position: relative;
+        width: 100%;
+        height: max-content;
+        left: auto;
+        top: auto;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            background: #F7F7F7;
+            border-radius: 3px;
+            margin-right: 11px;
+            margin-bottom: 11px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            padding: 4px 9px;
+            color: #9C9B9B;
+            border: 1px solid #9C9B9B;
+            border-radius: 5px;
+            display: flex;
+            cursor: pointer;
+            transition: 0.5s;
+            box-sizing: border-box;
+
+            &:hover {
+                color: #000000;
+                background: $yellow;
+                transition: 0.5s;
+
+                .close {
+                    width: 12px;
+                    height: 12px;
+                }
+
+                span {
+                    width: 10px;
+                    height: 2px;
+                    background-color: #A80606;
+                    transition: 0.2s;
+
+                    &:first-of-type {
+                        transform: rotate(45deg);
+                        top: 6px;
+                    }
+
+                    &:last-of-type {
+                        transform: rotate(-45deg);
+                        top: 6px;
+                    }
+                }
+            }
+        }
+
+        .close {
+            display: block;
+            position: relative;
+            align-self: center;
+            margin-left: 5px;
+            width: 8px;
+            height: 8px;
+
+            span {
+                position: absolute;
+                display: block;
+                width: 6.21px;
+                height: 1px;
+                background-color: #9C9B9B;
+                transition: 0.2s;
+
+
+                &:first-of-type {
+                    transform: rotate(45deg);
+                    top: 5.5px;
+                }
+
+                &:last-of-type {
+                    transform: rotate(-45deg);
+                    top: 5.5px;
+                }
+            }
+        }
+    }
+
+    .group_block {
+        margin-top: 185px;
+
+        .group_main {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-auto-rows: auto;
+            gap: 147px;
+        }
+
+        .group_inner {
+            padding: 25px;
+            max-width: 365px;
+            margin: 0 auto;
+        }
+
+        .img_block {
+            top: -122px;
+            left: calc(50% - 114px);
+            width: 228px;
+            height: 164px;
+        }
+
+        .author_block {
+            max-width: none;
+            min-height: auto;
+            margin-top: 50px;
+
+            h3 {
+                font-size: 26px;
+                line-height: 100%;
+                text-align: center;
+            }
+
+            .time {
+                margin-top: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                width: max-content;
+            }
+
+            span {
+                font-size: 16px;
+                line-height: 100%;
+            }
+        }
+
+        .week_block {
+            margin-top: 22px;
+
+            span {
+                display: block;
+                width: 100%;
+                font-size: 26px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+
+        .phone {
+            &::before {
+                display: none;
+            }
+
+            span {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            a {
+                font-size: 26px;
+                text-align: center;
+            }
+        }
+
+        .social_block {
+            width: max-content;
+            margin: 10px auto 0;
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .adres {
+            &::before {
+                width: 11.13px;
+                height: 13.36px;
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 100%;
+                color: #9C9B9B;
+                display: block;
+                padding-left: 17px;
+            }
+        }
+
+        .contact_block {
+            margin-top: 32px;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width:586px) {
+    .homegroups {
+        h1 {
+            font-size: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:426px) {
+    .homegroups {
+        .filter_block {
+            width: 100%;
+        }
+    }
+}

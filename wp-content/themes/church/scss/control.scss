@@ -1,0 +1,162 @@
+/*--------------------------------------------------------------
+# Control page
+--------------------------------------------------------------*/
+.control {
+    .title_block {
+        h1 {
+            margin: 0;
+            font-style: normal;
+            font-weight: 800;
+            color: #000000;
+        }
+    }
+
+    .main_block {
+        display: flex;
+        justify-content: space-between;
+        padding: 98px 0;
+    }
+
+    .control_inner {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 750px;
+        min-height: 242px;
+        padding: 53px 57px;
+        background-color: $yellow;
+        border-radius: 15px;
+        margin-right: 15px;
+
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .icon_block {
+        min-width: 33px;
+        height: 33px;
+        margin-right: 31px;
+
+        img {
+            margin-top: 8px;
+        }
+    }
+
+    .text_block {
+
+        h3,
+        .h3 {
+            margin: 0;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 100%;
+            color: #000000;
+        }
+
+        p {
+            margin: 0;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 130%;
+            color: #000000;
+        }
+    }
+}
+
+@media screen and (max-width:1640px) {}
+
+@media screen and (max-width:1500px) {
+    .control {
+        .control_inner {
+            min-height: auto;
+        }
+
+        .text_block {
+
+            h3,
+            .h3 {
+                font-size: 30px;
+                line-height: 100%;
+            }
+
+            p {
+                margin: 0;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 130%;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1368px) {}
+
+@media screen and (max-width:1200px) {}
+
+@media screen and (max-width:1024px) {
+    .control {
+        .control_inner {
+            padding: 40px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .control {
+        .main_block {
+            display: block;
+        }
+
+        .icon_block {
+            width: max-content;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 30px;
+        }
+
+        .text_block {
+            text-align: center;
+
+            h3,
+            .h3 {
+                font-size: 20px;
+                line-height: 100%;
+            }
+
+            p {
+                margin: 0;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 14px;
+                line-height: 130%;
+                color: #000000;
+            }
+        }
+
+        .control_inner {
+            display: block;
+            padding: 30px;
+            margin-bottom: 20px;
+            margin-right: 0;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:586px) {}
