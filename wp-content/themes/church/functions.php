@@ -353,3 +353,70 @@ require get_template_directory() . '/inc/calendar-post.php';
  * Add custom posts (Homegroups).
  */
 require get_template_directory() . '/inc/homegroups-post.php';
+
+function get_events(){
+    $args = array(
+        'posts_per_page' => 6,
+        'post_type' => 'calendar',
+        'order'   => 'ASC',
+        'orderby' => 'meta_value_num',
+        'meta_key' => 'date_event_end',
+        'paged' => isset($_GET['pagen']) ? $_GET['pagen'] : 1,
+        'tax_query' => array(
+            array(
+                'taxonomy' => $_GET['taxonomy'],
+                'field'    => 'slug',
+                'terms'    => $_GET['slug']
+            )
+        ),
+        'meta_query' => array(
+            array(
+                'key' => 'date_event_end',
+                'value' => date('Ymd'),
+                'type' => 'DATE',
+                'compare' => '>='
+            )
+        )
+    );
+
+    if(isset($_GET['week'])){
+        $day = date('w');
+        $week_start = date('Ymd', strtotime('-'.$day.' days'));
+        $week_end = date('Ymd', strtotime('+'.(6-$day).' days'));
+        $args['meta_query']['relation'] = "AND";
+        $args['meta_query'][] = array(
+            'key' => 'date_event_end',
+            'value' => $week_start,
+            'type' => 'DATE',
+            'compare' => '>='
+        );
+        $args['meta_query'][] = array(
+            'key' => 'date_event_end',
+            'value' => $week_end,
+            'type' => 'DATE',
+            'compare' => '<='
+        );
+    }
+
+    $query = new WP_Query($args);
+    $args['posts_per_page'] = -1;
+    $query2 = new WP_Query($args);
+    if( $query->have_posts() ){
+    ?>
+    <div class="events_box" data-events-count="<?php echo $query2->post_count;?>">
+        <?php
+        while( $query->have_posts() ){
+            $query->the_post();
+            ?>
+            <?php include(get_template_directory() . '/template-parts/events-template.php');
+
+        }
+        wp_reset_postdata(); // сбрасываем переменную $post
+        }
+        else
+        ?>
+    </div><?php
+    exit();
+}
+add_action( 'wp_ajax_get_events', 'get_events' );
+add_action( 'wp_ajax_nopriv_get_events', 'get_events' );

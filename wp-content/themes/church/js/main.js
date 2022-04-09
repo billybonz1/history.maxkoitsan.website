@@ -119,10 +119,23 @@ $(".more").on("click", function () {
 // Смена цвета при клике на кнопку
 // Фильтр
 
-function processAjaxData(response, urlPath){
-    $(".blog_main").replaceWith(response.html);
+function processAjaxData(response, urlPath, block){
+    block.replaceWith(response.html);
     document.title = response.pageTitle;
     window.history.pushState({"html":response.html,"pageTitle":response.pageTitle},"", urlPath);
+}
+
+function createUrlFromObj(obj){
+    let str = Object.entries(obj).map(([key, val]) => {
+        if(typeof val === 'object'){
+            val = Object.entries(val).map(([key1, val1]) => {
+                if(Array.isArray(val1)) val1 = val1.join("|");
+                return `${key1}:${val1}`
+            }).join(';');
+        }
+        return `${key}=${val}`
+    }).join('&');
+    return str;
 }
 
 function filter(reset = false){
@@ -139,16 +152,7 @@ function filter(reset = false){
 
     filter.custom_fields.reading_time = $("[name=reading_time]").val();
 
-    let str = Object.entries(filter).map(([key, val]) => {
-        if(typeof val === 'object'){
-            val = Object.entries(val).map(([key1, val1]) => {
-                if(Array.isArray(val1)) val1 = val1.join("|");
-                return `${key1}:${val1}`
-            }).join(';');
-        }
-        return `${key}=${val}`
-    }).join('&');
-
+    let str = createUrlFromObj(filter);
 
     $(".blog_main").addClass("lds-dual-ring");
     var ajaxUrl = reset ? "/blog/" : "/blog/?" + str;
@@ -159,7 +163,7 @@ function filter(reset = false){
        },
        success: function(response){
            $(".blog_main").removeClass("lds-dual-ring");
-           processAjaxData({html: response, pageTitle: document.title}, ajaxUrl);
+           processAjaxData({html: response, pageTitle: document.title}, ajaxUrl, $(".blog_main"));
        }
     });
 
@@ -183,6 +187,37 @@ $('.filter .reset_btn').click(function () {
 $("[name=reading_time]").on("change", function(){
     filter();
 });
+
+//Фильтр homegroups
+
+function filterHomeGroups(reset = false){
+    var filter = {
+        terms: {},
+        custom_fields: {}
+    };
+
+    $('.filter_block .filter_selected li').each(function(){
+        var dataFilterType = $(this).attr("data-filter-type");
+        var dataFilter = $(this).attr("data-filter").split("|");
+        if(!filter[dataFilterType][dataFilter[0]]) filter[dataFilterType][dataFilter[0]] = [];
+        filter[dataFilterType][dataFilter[0]].push(dataFilter[1]);
+    });
+
+    let str = createUrlFromObj(filter);
+    $(".home_groups").addClass("lds-dual-ring");
+    var ajaxUrl = reset ? window.location.pathname : window.location.pathname + "?" + str;
+    $.ajax({
+        url: ajaxUrl,
+        data: {
+            ajax: 1
+        },
+        success: function(response){
+            $(".home_groups").removeClass("lds-dual-ring");
+            processAjaxData({html: response, pageTitle: document.title}, ajaxUrl, $(".home_groups"));
+        }
+    });
+    console.log(str);
+}
 
 
 /* ========================================== 
@@ -302,19 +337,25 @@ $('.homegroups .reset_btn, .filter-close-btn').click(function () {
 // } else {
 $('.filter_block .wrap .col a').click(function (e) {
     event.preventDefault();
+    var dataFilterType = $(this).attr("data-filter-type");
+    var dataFilter = $(this).attr("data-filter");
+
     //Получаем имя и комментарий из инпутов
     var name = $(this).text(),
-        html = '<li class="select">' + name + '<div class="close"><span></span><span></span></div></li>';
+        html = '<li class="select" data-filter-type="'+dataFilterType+'" data-filter="'+dataFilter+'">' + name + '<div class="close"><span></span><span></span></div></li>';
     //Добавляем результат к нужному блоку
     $('.filter_block .filter_selected ul').append(html);
+    filterHomeGroups();
 });
 
 $('.homegroups .reset_btn').click(function () {
     $('.filter_block .filter_selected li').remove();
+    filterHomeGroups(true);
 });
 
 $('.filter_block .filter_selected ul').on('click', '.select', function () {
     $(this).remove();
+    filterHomeGroups();
 });
 // }
 

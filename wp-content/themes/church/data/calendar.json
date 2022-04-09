@@ -10,7 +10,21 @@
                         "date": "1/01/2022",
                         "time": "18:30 - 21:00 (PL time)",
                         "street": "ul. Powstańców Śląskich 199, 53-140 Wrocław",
-                        "phone": "+7 575 955 335"
+                        "phone": "+7 575 955 335",
+                        "social": {
+                            "instagram": {
+                                "target": "_blank",
+                                "url": "#calendar"
+                            },
+                            "tel": {
+                                "target": "_blank",
+                                "url": "#calendar"
+                            },
+                            "youtube": {
+                                "target": "_blank",
+                                "url": "#calendar"
+                            }
+                        }
                     }
                 ]
             },
@@ -72,7 +86,21 @@
                         "image": "/img/wroclaw/calendar/img_1.jpg",
                         "description": "День дураков, всемирный праздник, отмечаемый 1 апреля во многих странах. ",
                         "street": "ul. Powstańców Śląskich 9, 2-47 Wrocław",
-                        "phone": "+35 575 955 335"
+                        "phone": "+35 575 955 335",
+                        "social": {
+                            "instagram": {
+                                "target": "_blank",
+                                "url": "#1april"
+                            },
+                            "tel": {
+                                "target": "_blank",
+                                "url": "#1april"
+                            },
+                            "youtube": {
+                                "target": "_blank",
+                                "url": "#1april"
+                            }
+                        }
                     },
                     {
                         "name": "День смеха",

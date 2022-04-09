@@ -13,9 +13,9 @@
  * @package church
  */
 
+if(!isset($_GET['ajax'])){
 get_header('town');
 ?>
-
 <main id="primary" class="main-page local">
     <div class="breadcrumbs_block">
         <div class="container">
@@ -35,64 +35,64 @@ get_header('town');
                 </button>
             </div>
 
+
+            <?php
+
+
+                function filter_li($index){
+                    $acf_fields = acf_get_fields_by_id( 1127 );
+                    foreach($acf_fields[$index]['choices'] as $value){?>
+                        <li><a href="#" data-filter-type="custom_fields" data-filter="<?php echo $acf_fields[$index]['name']; ?>|<?php echo $value; ?>"><?php echo $value; ?></a></li>
+                    <?php }
+                }
+
+            ?>
+
             <div class="filter_block">
                 <form action="#">
                     <div class="wrap">
                         <div class="col">
                             <span>возраст<i></i></span>
                             <ul>
-                                <li><a href="#">возраст inner</a></li>
-                                <li><a href="#">возраст inner</a></li>
-                                <li><a href="#">возраст inner</a></li>
-                                <li><a href="#">возраст inner</a></li>
-                                <li><a href="#">возраст inner</a></li>
+                                <?php filter_li(1); ?>
                             </ul>
                         </div>
                         <div class="col">
                             <span>гендер<i></i></span>
                             <ul>
-                                <li><a href="#">мужской</a></li>
-                                <li><a href="#">женский</a></li>
+                                <?php filter_li(2); ?>
                             </ul>
                         </div>
                         <div class="col">
                             <span>район<i></i></span>
                             <ul>
-                                <li><a href="#">район inner</a></li>
-                                <li><a href="#">район inner</a></li>
-                                <li><a href="#">район inner</a></li>
-                                <li><a href="#">район inner</a></li>
-                                <li><a href="#">район inner</a></li>
+                                <?php filter_li(3); ?>
                             </ul>
                         </div>
                         <div class="col">
                             <span>день<i></i></span>
                             <ul>
-                                <li><a href="#">понедельник</a></li>
-                                <li><a href="#">вторник</a></li>
-                                <li><a href="#">среда</a></li>
-                                <li><a href="#">четверг</a></li>
-                                <li><a href="#">пятница</a></li>
-                                <li><a href="#">суббота</a></li>
-                                <li><a href="#">воскресенье</a></li>
+                                <?php filter_li(4); ?>
                             </ul>
                         </div>
                         <div class="col">
                             <span>язык<i></i></span>
                             <ul>
-                                <li><a href="#">RU</a></li>
-                                <li><a href="#">PL</a></li>
-                                <li><a href="#">EN</a></li>
+                                <?php filter_li(5); ?>
                             </ul>
                         </div>
                         <div class="col">
                             <span>тема<i></i></span>
+                            <?php 
+                                $themes = get_terms([
+                                    'taxonomy' => 'homegroups_themes',
+                                    'hide_empty' => false,
+                                ]);
+                            ?>
                             <ul>
-                                <li><a href="#">тема inner</a></li>
-                                <li><a href="#">тема inner</a></li>
-                                <li><a href="#">тема inner</a></li>
-                                <li><a href="#">тема inner</a></li>
-                                <li><a href="#">тема inner</a></li>
+                                <?php foreach($themes as $theme){?>
+                                    <li><a href="#" data-filter-type="terms" data-filter="<?php echo $theme->taxonomy; ?>|<?php echo $theme->slug; ?>"><?php echo $theme->name; ?></a></li>
+                                <?php } ?>
                             </ul>
                         </div>
                     </div>
@@ -106,8 +106,42 @@ get_header('town');
                         </div>
                     </div>
                 </form>
+                <?php
+                    $terms = [];
+                    if(!empty($_GET['terms'])){
+                        $termsArr = explode(";",$_GET['terms']);
+                        foreach($termsArr as $term){
+                            $termObj = explode(":",$term);
+                            $terms[$termObj[0]] = explode("|", $termObj[1]);
+                        }
+                    }
+
+                    $customFields = [];
+                    if(!empty($_GET['custom_fields'])){
+                        $customFieldsArr = explode(";",$_GET['custom_fields']);
+                        foreach($customFieldsArr as $customField){
+                            $customFieldObj = explode(":",$customField);
+                            $customFields[$customFieldObj[0]] = explode("|", $customFieldObj[1]);
+                        }
+                    }
+                ?>
+
                 <div class="filter_selected">
-                    <ul></ul>
+                    <ul>
+                        <?php foreach($customFields as $key=>$fieldArr){?>
+                            <?php foreach($fieldArr as $field){?>
+                                <li class="select" data-filter-type="custom_fields" data-filter="<?php echo $key; ?>|<?php echo $field; ?>"><?php echo $field; ?><div class="close"><span></span><span></span></div></li>
+                            <?php } ?>
+                        <?php } ?>
+                        <?php foreach($terms as $key=>$termArr){?>
+                            <?php foreach($termArr as $slug){?>
+                                <?php
+                                    $term = get_term_by("slug", $slug, $key);
+                                ?>
+                                <li class="select" data-filter-type="terms" data-filter="<?php echo $key; ?>|<?php echo $slug; ?>"><?php echo $term->name; ?><div class="close"><span></span><span></span></div></li>
+                            <?php } ?>
+                        <?php } ?>
+                    </ul>
                 </div>
             </div>
 
@@ -116,32 +150,77 @@ get_header('town');
 
     <section class="group_block">
         <div class="container">
-            <div class="main_block">
+<?php } ?>
+            <div class="main_block home_groups">
                 <?php
+                    $city_category = get_field("city_category");
                     $args = array(
                         'posts_per_page' => 12,
                         'post_type' => 'homegroup',
                         'order'   => 'ASC',
                         'paged' => get_query_var('paged', 1),
+                        'meta_query' => array(
+                            'relation'		=> 'AND'
+                        ),
+                        'tax_query' => array(
+                            'relation'		=> 'AND'
+                        )
                     );
+                    if(is_object($city_category)){
+                        $args['tax_query'][] = array(
+                            "taxonomy" => $city_category->taxonomy,
+                            'field'    => 'slug',
+                            'terms'    => array($city_category->slug),
+                            'operator' => "IN"
+                        );
+                    }
+                        if(!empty($_GET['terms'])){
+						    $termsArr = explode(";",$_GET['terms']);
+						    foreach($termsArr as $term){
+						        $termObj = explode(":",$term);
+						        if(strpos($termObj[1], "all") === FALSE){
+                                    $args['tax_query'][] = array(
+                                        'taxonomy' => $termObj[0],
+                                        'field'    => 'slug',
+                                        'terms'    => explode("|", $termObj[1]),
+                                        'operator' => "IN"
+                                    );
+                                }
+                            }
+                        }
 
-                    $query = new WP_Query($args); 
+						if(!empty($_GET['custom_fields'])){
+                            $customFieldsArr = explode(";",$_GET['custom_fields']);
+                            foreach($customFieldsArr as $customField){
+                                $customFieldObj = explode(":",$customField);
+
+                                $args['meta_query'][] = array(
+                                    'key'	  	=> $customFieldObj[0],
+                                    'value'	  	=> explode("|", $customFieldObj[1]),
+                                    'compare' 	=> 'IN',
+                                );
+                            }
+                        }
+
+                    global $wp_query;
+                    $query = new WP_Query($args);
+                    $wp_query = $query;
                     if( $query->have_posts() ){
                         ?>
-                <div class="group_main">
-                    <?php
-                        while( $query->have_posts() ){
-                            $query->the_post();
-                            ?>
-                    <?php include(get_template_directory() . '/template-parts/homegroups-template.php'); 
+                        <div class="group_main">
+                            <?php
+                                while( $query->have_posts() ){
+                                    $query->the_post();
+                                    ?>
+                            <?php include(get_template_directory() . '/template-parts/homegroups-template.php');
 
-                            }
-                            wp_reset_postdata(); // сбрасываем переменную $post
-                        } 
-                        else
-                    ?>
-                </div>
-                <!-- <div class="pagination_block">
+                                    }
+                                    wp_reset_postdata(); // сбрасываем переменную $post
+                                }
+                                else
+                            ?>
+                        </div>
+                 <div class="pagination_block">
                     <?php
 					the_posts_pagination( array(
                         'prev_text' => __( '<img src="/wp-content/themes/church/img/blog/Arrow_Right.svg" alt="">', 'textdomain' ),
@@ -150,10 +229,14 @@ get_header('town');
 
                     wp_reset_query();
 					?>
-                </div> -->
+                </div>
             </div>
+
+<?php if(!isset($_GET['ajax'])){?>
+        </div>
     </section>
 </main><!-- #main -->
 
 <?php
 get_footer();
+}

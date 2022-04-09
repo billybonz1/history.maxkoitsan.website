@@ -202,6 +202,7 @@ $(function () {
                                 if (i == month) {
                                     Object.entries(v).forEach(([k, v], uu) => {
                                         if (k == date) {
+                                            console.log(v);
                                             card(v[u])
                                             viewEvent.show()
                                         }
@@ -267,6 +268,32 @@ function card(v) {
 
     if (v.date) $(".viewEvent .date").html(v.date)
     if (v.time) $(".viewEvent .time").html(v.time)
+
+    let insta = $(".sIcons .insta");
+    let tg = $(".sIcons .tg");
+    let yt = $(".sIcons .yt");
+    console.log(v);
+    if(v.social && v.social.instagram){
+        insta.attr("href", v.social.instagram.url);
+        insta.attr("target", v.social.instagram.target);
+        insta.show();
+    }else{
+        insta.hide();
+    }
+    if(v.social && v.social.tel){
+        tg.attr("href", v.social.tel.url);
+        tg.attr("target", v.social.tel.target);
+        tg.show();
+    }else{
+        tg.hide();
+    }
+    if(v.social && v.social.youtube){
+        yt.attr("href", v.social.youtube.url);
+        yt.attr("target", v.social.youtube.target);
+        yt.show();
+    }else{
+        yt.hide();
+    }
 }
 
 function positionActiveMonth() {
@@ -294,7 +321,7 @@ function handleCalendarJson(func) {
         calendarToLocalStorage(now, func)
     } else {
 
-        let prevDate = localStorage.getItem('dataJsonTime')
+        let prevDate = localStorage.getItem('calendarJsonTime')
         let difference = now - prevDate;
         if (difference > calendarJsonLifetime) {
             calendarToLocalStorage(now, func)
@@ -306,6 +333,18 @@ function handleCalendarJson(func) {
 
 function calendarToLocalStorage(now, func) {
     ajax_get('/../wp-content/themes/church/data/calendar.json', 'json', function (data) {
+        for (const [year, yearObj] of Object.entries(eventsJson.events)) {
+            for (const [month, monthObj] of Object.entries(yearObj)) {
+                for (const [day, dayArr] of Object.entries(monthObj)) {
+                    if(data.events[year][month][day]){
+                        data.events[year][month][day] = data.events[year][month][day].concat(dayArr);
+                    }else{
+                        data.events[year][month][day] = dayArr;
+                    }
+                }
+            }
+        }
+        console.log(data);
         localStorage.setItem('calendarJson', JSON.stringify(data));
         localStorage.setItem('calendarJsonTime', now);
         func()
