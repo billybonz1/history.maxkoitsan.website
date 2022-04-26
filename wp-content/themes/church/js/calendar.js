@@ -258,21 +258,65 @@ $(function () {
 
     });
 });
+var html_entity_decode = (function() {
+    var cache = {},
+        character,
+        e = document.createElement('div');
 
+    return function(html) {
+        return html.replace(/([&][^&; ]+[;])/g, function(entity) {
+            character = cache[entity];
+            if (!character) {
+                e.innerHTML = entity;
+                if (e.childNodes[0])
+                    character = cache[entity] = e.childNodes[0].nodeValue;
+                else
+                    character = '';
+            }
+            return character;
+        });
+    };
+})();
 function card(v) {
-    if (v.name) $(".viewEvent h4").html(v.name)
-    if (v.description) $(".viewEvent .desc").html(v.description)
-    if (v.image) $(".viewEvent .image").html($("<img src='" + v.image + "'></img>"))
-    if (v.phone) $(".viewEvent .contacts").html(v.phone)
-    if (v.street) $(".viewEvent .street").html(v.street)
+    if (v.name)
+        $(".viewEvent h4").html(v.name)
+    else
+        $(".viewEvent h4").html("")
 
-    if (v.date) $(".viewEvent .date").html(v.date)
-    if (v.time) $(".viewEvent .time").html(v.time)
+    if (v.description)
+        $(".viewEvent .desc")[0].innerHTML = html_entity_decode(v.description)
+    else
+        $(".viewEvent .desc")[0].innerHTML = ""
+
+    if (v.image)
+        $(".viewEvent .image").html($("<img src='" + v.image + "' />"))
+    else
+        $(".viewEvent .image").html("")
+
+    if (v.phone)
+        $(".viewEvent .contacts").html(v.phone)
+    else
+        $(".viewEvent .contacts").html("")
+
+    if (v.street)
+        $(".viewEvent .street").html(v.street)
+    else
+        $(".viewEvent .street").html("")
+
+    if (v.date)
+        $(".viewEvent .date").html(v.date)
+    else
+        $(".viewEvent .date").html("")
+
+
+    if (v.time)
+        $(".viewEvent .time").html(v.time)
+    else
+        $(".viewEvent .time").html("")
 
     let insta = $(".sIcons .insta");
     let tg = $(".sIcons .tg");
     let yt = $(".sIcons .yt");
-    console.log(v);
     if(v.social && v.social.instagram){
         insta.attr("href", v.social.instagram.url);
         insta.attr("target", v.social.instagram.target);
@@ -293,6 +337,13 @@ function card(v) {
         yt.show();
     }else{
         yt.hide();
+    }
+
+    if(v.url){
+        $(".viewEvent .moreButton").attr("href", v.url);
+        $(".viewEvent .moreButton").show();
+    }else{
+        $(".viewEvent .moreButton").hide();
     }
 }
 

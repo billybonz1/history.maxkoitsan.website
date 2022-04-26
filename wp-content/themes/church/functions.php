@@ -382,13 +382,13 @@ function get_events(){
     if(isset($_GET['week'])){
         $day = date('w');
         $week_start = date('Ymd', strtotime('-'.$day.' days'));
-        $week_end = date('Ymd', strtotime('+'.(6-$day).' days'));
+        $week_end = date('Ymd', strtotime('+'.(7-$day).' days'));
         $args['meta_query']['relation'] = "AND";
         $args['meta_query'][] = array(
             'key' => 'date_event_end',
             'value' => $week_start,
             'type' => 'DATE',
-            'compare' => '>='
+            'compare' => '>'
         );
         $args['meta_query'][] = array(
             'key' => 'date_event_end',
@@ -403,7 +403,7 @@ function get_events(){
     $query2 = new WP_Query($args);
     if( $query->have_posts() ){
     ?>
-    <div class="events_box" data-events-count="<?php echo $query2->post_count;?>">
+    <div class="events_box" data-week-start="<?php echo $week_start; ?>" data-week-end="<?php echo $week_end; ?>" data-events-count="<?php echo $query2->post_count;?>">
         <?php
         while( $query->have_posts() ){
             $query->the_post();

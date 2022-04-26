@@ -199,8 +199,11 @@ get_header('town');
             $j = date("j", $timestamp_start);
             $eventObj = [];
             $eventObj['name'] = $event->post_title;
-            if(!empty($event->post_content)) $eventObj['description'] = $event->post_content;
-            $eventObj['image'] = get_the_post_thumbnail_url( $event, "full" );
+            if(!empty($event->post_content)) $eventObj['description'] = htmlspecialchars(str_replace(array("\r\n", "\r", "\n"), '<br>', "<div>".$event->post_content."</div>"));
+            $image = get_the_post_thumbnail_url( $event, "full" );
+            if(!empty($image)){
+                $eventObj['image'] = $image;
+            }
             $eventObj['date'] = date("d/m/Y", $timestamp_start);
             $time = get_field("time_text_event", $event->ID);
             if(!empty($time)){
@@ -216,7 +219,14 @@ get_header('town');
             }
 
             $social = get_field("events", $event->ID);
-            $eventObj['social'] = $social;
+            if(!empty($social)){
+                $eventObj['social'] = $social;
+            }
+
+            $url = get_field("url", $event->ID);
+            if(!empty($url)){
+                $eventObj['url'] = $url;
+            }
 
             $span = [];
             if($timestamp_end > $timestamp_start){
